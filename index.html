@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zai Studio | Game Studio | Efficient Game Development Services</title>
+<meta name="description" content="Thai Game Studio focused on quality, efficiency and user experience. PC, Mobile & Web Games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07090f;
+  --bg2:#0d1017;
+  --accent:#4f7bff;
+  --accent2:#6a9bff;
+  --text:#e8eaf0;
+  --muted:#8892a4;
+  --border:rgba(79,123,255,0.15);
+  --nav-h:72px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+
+/* ANIMATED BACKGROUND */
+.bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg-canvas::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 70% 40%, rgba(0,40,80,0.55) 0%, transparent 70%),
+             radial-gradient(ellipse 50% 40% at 20% 80%, rgba(20,0,60,0.3) 0%, transparent 60%);
+}
+.stars{position:absolute;inset:0}
+.star{position:absolute;border-radius:50%;background:#fff;animation:twinkle var(--d,3s) ease-in-out infinite var(--delay,0s)}
+@keyframes twinkle{0%,100%{opacity:var(--min,0.1);transform:scale(1)}50%{opacity:var(--max,0.6);transform:scale(1.2)}}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;height:var(--nav-h);
+  background:rgba(7,9,15,0.85);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(1.5rem,5vw,4rem);z-index:100;
+}
+.logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.logo-img{
+  width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(135deg,#1a3a8a,#4f7bff);
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;color:#fff;font-family:'Rajdhani',sans-serif;
+  overflow:hidden;
+}
+.logo-img img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text b{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.08em;color:#fff}
+.logo-text span{font-size:0.58rem;letter-spacing:0.25em;color:var(--muted);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:0.9rem;letter-spacing:0.02em;transition:color 0.2s;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:0.05em}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links .active{color:var(--accent)}
+.btn-nav{
+  background:var(--accent);color:#fff!important;
+  padding:0.55rem 1.4rem;border-radius:8px;font-weight:700!important;
+  transition:background 0.2s,transform 0.2s!important;
+}
+.btn-nav:hover{background:var(--accent2)!important;transform:translateY(-1px)!important}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--text);transition:all 0.3s;border-radius:2px}
+
+/* MAIN */
+main{padding-top:var(--nav-h);position:relative;z-index:1}
+
+/* HERO */
+.hero{
+  min-height:calc(100vh - var(--nav-h));
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2rem;align-items:center;
+  max-width:1280px;margin:0 auto;
+  padding:clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,4rem);
+}
+.hero-content{animation:fadeUp 0.8s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{
+  font-family:'Rajdhani',sans-serif;font-weight:700;
+  font-size:clamp(2.4rem,4.5vw,3.8rem);line-height:1.1;
+  letter-spacing:-0.01em;margin-bottom:1.25rem;color:#fff;
+}
+.hero p{color:var(--muted);font-size:1rem;max-width:480px;margin-bottom:2rem;line-height:1.8}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:var(--accent);color:#fff;text-decoration:none;
+  font-weight:600;font-size:0.95rem;padding:0.8rem 1.8rem;
+  border-radius:50px;transition:all 0.2s;border:none;cursor:pointer;
+}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,123,255,0.35)}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:rgba(255,255,255,0.08);color:var(--text);text-decoration:none;
+  font-weight:500;font-size:0.95rem;padding:0.8rem 1.8rem;
+  border-radius:50px;transition:all 0.2s;border:1px solid rgba(255,255,255,0.15);
+}
+.btn-secondary:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:0.5rem}
+.hero-tag{
+  font-size:0.75rem;color:var(--muted);
+  border:1px solid var(--border);padding:0.3rem 0.8rem;border-radius:4px;
+  background:rgba(79,123,255,0.05);font-family:'Rajdhani',sans-serif;letter-spacing:0.05em;
+}
+.hero-image{
+  display:flex;justify-content:center;align-items:flex-end;
+  animation:fadeUp 0.8s 0.2s ease both;
+}
+.hero-image img{
+  max-height:78vh;object-fit:contain;
+  filter:drop-shadow(0 0 60px rgba(79,123,255,0.2));
+  animation:float 5s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+.social-bar{
+  position:fixed;top:50%;right:1.5rem;transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:0.75rem;z-index:50;
+}
+.social-bar a{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;color:var(--muted);font-size:0.9rem;
+  transition:all 0.2s;font-family:'Rajdhani',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0;
+}
+.social-bar a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* SECTIONS */
+section{padding:clamp(3rem,7vw,5.5rem) clamp(1.5rem,5vw,4rem);max-width:1280px;margin:0 auto}
+.section-tag{
+  font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:0.3em;
+  color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem;
+}
+.section-tag::before{content:'— '}
+section h2{font-family:'Rajdhani',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:#fff;margin-bottom:2.5rem}
+
+/* WHY GRID */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+.why-card{
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  padding:2rem;border-radius:12px;transition:all 0.3s;
+}
+.why-card:hover{background:rgba(79,123,255,0.06);border-color:rgba(79,123,255,0.3);transform:translateY(-4px)}
+.why-icon{font-size:1.8rem;margin-bottom:1rem}
+.why-card h3{font-family:'Rajdhani',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;color:#fff;letter-spacing:0.02em}
+.why-card p{color:var(--muted);font-size:0.88rem;line-height:1.7}
+
+/* TESTIMONIALS */
+.testimonials-wrap{background:rgba(255,255,255,0.02);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.t-card{
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  padding:1.75rem;border-radius:12px;
+}
+.t-quote{font-size:2.5rem;color:var(--accent);opacity:0.4;line-height:1;margin-bottom:0.5rem}
+.t-card p{color:var(--muted);font-style:italic;font-size:0.9rem;line-height:1.8;margin-bottom:1.25rem}
+.t-author strong{font-family:'Rajdhani',sans-serif;font-size:0.95rem;color:#fff}
+.t-author span{display:block;font-size:0.72rem;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-top:0.1rem}
+
+/* PARTNERS */
+.partners-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:3rem;margin-top:1.5rem}
+.partner-logo{filter:brightness(0) invert(1);opacity:0.3;max-height:36px;object-fit:contain;transition:opacity 0.2s}
+.partner-logo:hover{opacity:0.6}
+
+/* CTA STRIP */
+.cta-strip{
+  background:linear-gradient(135deg,rgba(79,123,255,0.12) 0%,rgba(20,40,100,0.2) 100%);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.cta-inner{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;
+  max-width:1280px;margin:0 auto;padding:3.5rem clamp(1.5rem,5vw,4rem);
+}
+.cta-inner h2{font-family:'Rajdhani',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:#fff}
+.cta-emails{display:flex;flex-direction:column;gap:0.3rem}
+.cta-emails a{color:var(--accent2);text-decoration:none;font-size:0.95rem;transition:opacity 0.2s}
+.cta-emails a:hover{opacity:0.7}
+
+/* FOOTER */
+footer{
+  background:var(--bg2);border-top:1px solid var(--border);
+  padding:3rem clamp(1.5rem,5vw,4rem);position:relative;z-index:1;
+}
+.footer-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr auto auto;gap:3rem;align-items:start}
+.footer-brand p{color:var(--muted);font-size:0.85rem;margin-top:0.75rem;max-width:260px;line-height:1.7}
+.footer-col h4{font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.footer-col ul li a{text-decoration:none;color:var(--muted);font-size:0.88rem;transition:color 0.2s}
+.footer-col ul li a:hover{color:#fff}
+.footer-bottom{max-width:1280px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:var(--muted);font-size:0.8rem}
+.footer-socials{display:flex;gap:1.25rem}
+.footer-socials a{color:var(--muted);text-decoration:none;font-family:'Rajdhani',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s}
+.footer-socials a:hover{color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;text-align:center;min-height:auto;padding-top:2rem;padding-bottom:3rem}
+  .hero-image{order:-1}.hero-image img{max-height:45vh}
+  .hero p,.hero-btns,.hero-tags{justify-content:center}
+  .hero p{margin-left:auto;margin-right:auto}
+  .social-bar{display:none}
+  .footer-inner{grid-template-columns:1fr;gap:2rem}
+}
+@media(max-width:640px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(7,9,15,0.97);padding:1.5rem;border-bottom:1px solid var(--border);gap:1.5rem}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+}
+
+.t-card .t-author{display:flex;align-items:center;gap:0.75rem}
+.t-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--border);flex-shrink:0}
+</style>
+</head>
+<body>
+
+<!-- Animated star background -->
+<div class="bg-canvas">
+  <div class="stars" id="stars"></div>
+</div>
+
+<!-- Social sidebar -->
+<div class="social-bar">
+  <a href="https://www.facebook.com/ZaiStudio" target="_blank">FB</a>
+  <a href="https://www.youtube.com/channel/UCz8Jmx_ahddrO3pYkh9ZxOA" target="_blank">YT</a>
+  <a href="https://twitter.com/Zai_Studio" target="_blank">X</a>
+  <a href="https://www.instagram.com/zaistudiogame" target="_blank">IG</a>
+  <a href="https://www.tiktok.com/@zaistudio" target="_blank">TT</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-img">
+      <img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="Zai Studio Logo" onerror="this.parentElement.textContent='Z'">
+    </div>
+    <div class="logo-text">
+      <b>ZAI STUDIO</b>
+      <span>Game Studio</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="games.html">Our Games</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <p class="section-tag">Thai Game Studio</p>
+    <h1>Delivering Joy Through Games,<br>Meeting Your Unique Needs</h1>
+    <p>Games serve as powerful communication media. Despite Zai Studio being small, we focus on user experience, efficiency, and productivity systemss to create wonderful games.</p>
+    <div class="hero-btns">
+      <a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">Get a Quote</a>
+      <a href="games.html" class="btn-secondary">View Our Games</a>
+    </div>
+    <div class="hero-tags">
+      <span class="hero-tag">PC Game</span>
+      <span class="hero-tag">Mobile Game</span>
+      <span class="hero-tag">Web Game</span>
+      <span class="hero-tag">5+ Platforms</span>
+      <span class="hero-tag">Unity</span>
+      <span class="hero-tag">2D Spine</span>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img
+      src="https://static.wixstatic.com/media/6839ea_54d21862d953449096dd45092d6f9168~mv2.png/v1/fill/w_370,h_665,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Mali.png"
+      alt="Zai Studio Character"
+    >
+  </div>
+</div>
+
+<!-- WHY CHOOSE -->
+<section>
+  <p class="section-tag">Our Edge</p>
+  <h2>Why Choose Zai Studio</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">🎨</div>
+      <h3>Quality Graphic with Optimization</h3>
+      <p>We plan to provide the best quality games to support the target audience devices with beautiful images without lagging.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🤝</div>
+      <h3>Win-Win Situation</h3>
+      <p>We sell our games at affordable prices that players still find worthwhile. We deal with sincerity and honesty for good results for both our customers and us.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚙️</div>
+      <h3>Efficiency Management Service</h3>
+      <p>We use Agile principles and Trello in our management to test the prototype for better quality work at a proper time and good cost.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💡</div>
+      <h3>Experienced Advisor Service</h3>
+      <p>We are at your service advising those interested in making games — whether universities, professors, students, or entrepreneurs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials-wrap">
+  <section>
+    <p class="section-tag">What Players Say</p>
+    <h2>Testimonials</h2>
+    <div class="testimonials-grid">
+      <div class="t-card">
+        <div class="t-quote">"</div>
+        <p>I'll be buying this as soon as it launches because I loved 7 Sexy Sins. But if you made a Switch version, I'd gladly buy it again there...</p>
+        <div class="t-author"><img src="assets/images/reviewer_01.png" alt="tastefultoy" class="t-avatar"><div><strong>tastefultoy</strong><span>Steam User</span></div></div>
+      </div>
+      <div class="t-card">
+        <div class="t-quote">"</div>
+        <p>Wonderful game, looking forward for more games from this developer.</p>
+        <div class="t-author"><img src="assets/images/reviewer_02.png" alt="Zaraki Snakenoman" class="t-avatar"><div><strong>Zaraki Snakenoman</strong><span>Steam User</span></div></div>
+      </div>
+      <div class="t-card">
+        <div class="t-quote">"</div>
+        <p>Bought this as soon as I possibly could since the original game was so good. Very nice game. Definitely recommend. 10/10</p>
+        <div class="t-author"><img src="assets/images/reviewer_03.png" alt="A Squid On Fire" class="t-avatar"><div><strong>A Squid On Fire</strong><span>Steam User</span></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PARTNERS -->
+<section style="text-align:center">
+  <p class="section-tag" style="justify-content:center;display:flex">Ecosystem</p>
+  <h2>Our Partners</h2>
+  <div class="partners-row">
+    <img src="https://static.wixstatic.com/media/6839ea_543917ea80a949de82fcffa198bc1710~mv2.png/v1/fill/w_140,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/steam-logo.png" alt="Steam" class="partner-logo">
+    <img src="https://static.wixstatic.com/media/6839ea_21341084c1764d1e84a315da92e1fe28~mv2.png/v1/fill/w_74,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/datawow_blacktext.png" alt="Datawow" class="partner-logo">
+    <img src="https://static.wixstatic.com/media/6839ea_f60ffb6784c845ffa87c55928eeda978~mv2.png/v1/fill/w_96,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CCG-Logo-Black%2BTitle.png" alt="CCG" class="partner-logo">
+    <img src="https://static.wixstatic.com/media/6839ea_19642b45ee8e4403a7a831d77c7be2d3~mv2.png/v1/fill/w_60,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/zeta.png" alt="Zeta" class="partner-logo">
+    <img src="https://static.wixstatic.com/media/6839ea_dc3178e6acab4cbb8d3c6015cd70b784~mv2.png/v1/fill/w_110,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/nutaku-logo.png" alt="Nutaku" class="partner-logo">
+  </div>
+</section>
+
+</main>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="cta-inner">
+    <h2>Ready to Build Your Game?</h2>
+    <div class="cta-emails">
+      <a href="mailto:contact.zaistudio@gmail.com">contact.zaistudio@gmail.com</a>
+    </div>
+    <a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">Get a Quote</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-img">
+          <img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'">
+        </div>
+        <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
+      </a>
+      <p>Delivering Joy Through Games, Meeting Your Unique Needs.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="games.html">Our Games</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/ZaiStudio" target="_blank">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/company/67077298/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/channel/UCz8Jmx_ahddrO3pYkh9ZxOA" target="_blank">YouTube</a></li>
+        <li><a href="https://www.tiktok.com/@zaistudio" target="_blank">TikTok</a></li>
+        <li><a href="https://twitter.com/Zai_Studio" target="_blank">Twitter / X</a></li>
+        <li><a href="https://www.instagram.com/zaistudiogame" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2021 by ZAI STUDIO CO., LTD. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/ZaiStudio" target="_blank">Facebook</a>
+      <a href="https://www.youtube.com/channel/UCz8Jmx_ahddrO3pYkh9ZxOA" target="_blank">YouTube</a>
+      <a href="https://www.tiktok.com/@zaistudio" target="_blank">TikTok</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Generate stars
+const starsEl = document.getElementById('stars');
+for(let i=0;i<120;i++){
+  const s = document.createElement('div');
+  s.className='star';
+  const size = Math.random()*2.5+0.5;
+  s.style.cssText=`
+    width:${size}px;height:${size}px;
+    left:${Math.random()*100}%;top:${Math.random()*100}%;
+    --d:${2+Math.random()*4}s;--delay:${-Math.random()*4}s;
+    --min:${0.05+Math.random()*0.1};--max:${0.3+Math.random()*0.5};
+  `;
+  starsEl.appendChild(s);
+}
+
+// Mobile nav
+document.getElementById('nav-toggle').addEventListener('click',()=>{
+  document.getElementById('nav-links').classList.toggle('open');
+});
+</script>
+</body>
+</html>

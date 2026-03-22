@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Shoot Shoot My Waifu (7 Sexy Sins EP2: Tadaima) | Zai Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07090f;--bg2:#0d1017;--accent:#4f7bff;--accent2:#6a9bff;--text:#e8eaf0;--muted:#8892a4;--border:rgba(79,123,255,0.15);--nav-h:72px}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+.bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(0,30,70,0.5) 0%,transparent 70%)}
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(7,9,15,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);z-index:100}
+.logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.logo-img{width:36px;height:36px;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#1a3a8a,#4f7bff)}
+.logo-img img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text b{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.08em;color:#fff}
+.logo-text span{font-size:0.58rem;letter-spacing:0.25em;color:var(--muted);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:0.05em;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.btn-nav{background:var(--accent);color:#fff!important;padding:0.55rem 1.4rem;border-radius:8px}
+main{padding-top:var(--nav-h);position:relative;z-index:1}
+.post-wrap{max-width:760px;margin:0 auto;padding:2.5rem clamp(1.5rem,5vw,2.5rem) 6rem}
+.post-meta{color:var(--muted);font-size:0.82rem;margin-bottom:1rem}
+.post-wrap h1{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:1.5rem}
+.back-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--muted);text-decoration:none;font-family:'Rajdhani',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.75rem;transition:color 0.2s}
+.back-link:hover{color:var(--accent)}
+.post-body{font-size:1rem;line-height:1.85;color:var(--muted)}
+.post-body p{margin-bottom:1rem}
+.post-body h2{font-size:1.35rem;font-weight:700;color:#fff;margin:2.5rem 0 0.75rem;font-family:'Rajdhani',sans-serif}
+.post-body h3{font-size:1.1rem;font-weight:700;color:#fff;margin:1.75rem 0 0.6rem;font-family:'Rajdhani',sans-serif}
+.post-body h4{font-size:0.97rem;font-weight:600;color:var(--text);margin:1rem 0 0.4rem;font-style:italic}
+.tagline-h{font-style:italic;font-weight:700;font-size:1.05rem;color:var(--text);margin-bottom:0.15rem}
+.tagline-p{font-style:italic;font-size:0.97rem;color:var(--muted);margin-bottom:1rem;line-height:1.8}
+.tagline-p strong{font-style:italic;color:var(--text)}
+.info-line{font-size:0.97rem;margin-bottom:0.3rem}
+.info-line strong{color:#fff;font-weight:700}
+.post-body img.full-w{width:100%;border-radius:4px;margin:1.25rem 0;display:block}
+.post-body img.spin{max-width:270px;border-radius:4px;margin:1rem 0;display:block}
+
+/* ── PHOTO GRID — thumbnail squares, click to lightbox ── */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:1.25rem 0}
+.photo-item{display:block;overflow:hidden;border-radius:3px;cursor:zoom-in}
+.photo-grid .photo-item{aspect-ratio:1}
+.photo-grid .photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.25s,filter 0.25s;filter:brightness(0.9)}
+.photo-grid .photo-item:hover img{transform:scale(1.04);filter:brightness(1.05)}
+
+/* 2-col landscape for depa */
+.photo-grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:1.25rem 0;align-items:start}
+.photo-grid-2col .photo-item{display:block;overflow:hidden;border-radius:3px;cursor:zoom-in;aspect-ratio:16/9}
+.photo-grid-2col .photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:filter 0.25s;filter:brightness(0.9)}
+.photo-grid-2col .photo-item:hover img{filter:brightness(1.05)}
+
+/* Lightbox */
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.94);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out}
+#lb.open{display:flex}
+#lb img{max-width:94vw;max-height:94vh;object-fit:contain;border-radius:4px}
+#lb-close{position:fixed;top:1rem;right:1.5rem;color:#fff;font-size:2.2rem;cursor:pointer;background:none;border:none;opacity:0.7;line-height:1}
+#lb-close:hover{opacity:1}
+#lb-caption{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:0.8rem;font-family:'Outfit',sans-serif}
+
+.post-body ul{list-style:none;margin:0.5rem 0 1rem 0;display:flex;flex-direction:column;gap:0.65rem}
+.post-body ul li{padding-left:1.4rem;position:relative;font-size:0.97rem;color:var(--muted)}
+.post-body ul li::before{content:"•";color:var(--accent);position:absolute;left:0;font-size:1.1rem;top:-0.05rem}
+.post-body ul li strong,.post-body ul li b{color:#fff}
+.post-body ul.sub-list{margin-top:0.4rem;margin-left:1rem}
+.post-body ul.sub-list li{font-size:0.93rem}
+.roadmap{display:flex;flex-direction:column;margin:0.5rem 0 1.25rem}
+.rm-item{display:flex;gap:1rem;padding:0.75rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.rm-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:0.45rem}
+.rm-item p{margin:0;color:var(--muted);font-size:0.95rem}
+.rm-item p strong{color:#fff}
+.btn-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0 1.5rem}
+.btn-primary{display:inline-flex;align-items:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:0.9rem;padding:0.7rem 1.5rem;border-radius:50px;transition:all 0.2s}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:var(--text);text-decoration:none;font-weight:500;font-size:0.9rem;padding:0.7rem 1.5rem;border-radius:50px;transition:all 0.2s}
+.btn-ghost:hover{background:rgba(255,255,255,0.12)}
+
+.social-links{display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.25rem 0 1rem}
+.social-btn{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(79,123,255,0.1);border:1px solid rgba(79,123,255,0.3);color:var(--accent2);text-decoration:none;font-size:0.85rem;font-weight:500;padding:0.55rem 1.1rem;border-radius:50px;transition:all 0.2s;font-family:'Outfit',sans-serif}
+.social-btn:hover{background:rgba(79,123,255,0.2);transform:translateY(-2px)}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem clamp(1.5rem,5vw,4rem);position:relative;z-index:1;margin-top:4rem}
+.footer-bottom{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:var(--muted);font-size:0.8rem}</style>
+</head>
+<body>
+<div class="bg-canvas"></div>
+
+<div id="lb" onclick="closeLB()">
+  <button id="lb-close" onclick="closeLB()">✕</button>
+  <img id="lb-img" src="" alt="">
+  <div id="lb-caption"></div>
+</div>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div>
+    <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="games.html" class="active">Our Games</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<main>
+<div class="post-wrap">
+  <a href="games.html" class="back-link">← Back to Our Games</a>
+  <p class="post-meta">Oct 14, 2021 &nbsp;·&nbsp; Updated: Oct 18, 2021</p>
+  <h1>Shoot Shoot My Waifu (7 Sexy Sins EP2: Tadaima)</h1>
+
+  <div class="post-body">
+
+    <p>This is the <a href="https://store.steampowered.com/app/1405660/Shoot_Shoot_My_Waifu/" target="_blank" style="color:var(--accent)">Steam version</a> from original version</p>
+
+    <!-- Hero image -->
+    <a href="assets/images/6839ea_7ec56d794e3642469f08861bee6a67b4_mv2.jpg" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:1rem 0">
+      <img src="assets/images/6839ea_7ec56d794e3642469f08861bee6a67b4_mv2.jpg" alt="Shoot Shoot My Waifu" style="width:100%;display:block;filter:brightness(1)">
+    </a>
+
+    <p>Your mission is to search for those 7 sins demons disguised as Waifu's in human world. Fighting and confronting beautiful demon bosses. Punish them with holy water. Force them to return to their own form by using pleasuring tools. And collect new photos of their shameful defeat to your album.</p>
+
+    <!-- Game info banner -->
+    <img class="full-w" src="assets/images/6839ea_c6e4c67a3f8d4fe2bc60aed13938cfd3_mv2.png" alt="Game info">
+
+    <div class="callout" style="background:rgba(255,100,100,0.07);border-left-color:#ff6464;margin:1.25rem 0">
+      This game contains content that may not be appropriate for all ages, including the following: <strong>Partial Nudity, Sexual Content</strong><br>
+      Characters depicted in this game are over 18 years of age.
+    </div>
+
+    <div class="btn-row">
+      <a href="https://store.steampowered.com/app/1405660/Shoot_Shoot_My_Waifu/" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.37l3.03-6.27A3.5 3.5 0 0 1 12 10.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5 3.5 3.5 0 0 1-2.12-.71L6.3 20.53A12 12 0 0 0 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg>
+        Play on Steam
+      </a>
+    </div>
+
+    <blockquote style="border-left:3px solid var(--accent);padding:1rem 1.5rem;background:rgba(79,123,255,0.05);margin:1.5rem 0;border-radius:0 8px 8px 0;font-style:italic;color:var(--muted)">
+      "After Raphael defeated all 7 demon girls the first 7 Sexy Sins episode, those demons have fled to hide from him in the human world. When he got word of their whereabouts, he got excited and started preparing himself to visit the human world for purification once again."
+    </blockquote>
+
+    <p>This time he is going with new forms and more powerful weapons to vanquish those demons by destroying their sinful display of armor and clothes one piece at a time.</p>
+
+    <!-- Gameplay screenshot 1 -->
+    <a href="assets/images/6839ea_a7fd745fd5884821863333ae1ed5d8e6_mv2.png" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:1.25rem 0">
+      <img src="assets/images/6839ea_a7fd745fd5884821863333ae1ed5d8e6_mv2.png" alt="Gameplay" style="width:100%;display:block">
+    </a>
+
+    <p>In this game, you are taking the role of Raphael, the angel who possesses the photo album of sexy girls from the three worlds.</p>
+    <p>Your mission is to search for those 7 sins demons disguised as Waifu's in human world. Fighting, groaning, dealing with demonic minions, dodging bullet, and confronting beautiful demon bosses. Punish them with holy water. Force them to return to their own form by using pleasuring tools.</p>
+
+    <!-- Gameplay screenshot 2 -->
+    <a href="assets/images/6839ea_98f876bfc14647779e4257017e21347b_mv2.png" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:1.25rem 0">
+      <img src="assets/images/6839ea_98f876bfc14647779e4257017e21347b_mv2.png" alt="Gameplay 2" style="width:100%;display:block">
+    </a>
+
+    <div class="btn-row" style="margin-top:1.5rem">
+      <a href="https://store.steampowered.com/app/1405660/Shoot_Shoot_My_Waifu/" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.37l3.03-6.27A3.5 3.5 0 0 1 12 10.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5 3.5 3.5 0 0 1-2.12-.71L6.3 20.53A12 12 0 0 0 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg>
+        Go Play it Now on Steam!
+      </a>
+    </div>
+
+  </div>
+</div>
+</main>
+
+<footer><div class="footer-bottom"><p>© 2021 by ZAI STUDIO CO., LTD.</p><a href="games.html" style="color:var(--accent);text-decoration:none;font-size:0.8rem;">← All Games</a></div></footer>
+
+<script>
+function openLB(src) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLB() {
+  document.getElementById('lb').classList.remove('open');
+  document.getElementById('lb-img').src = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLB(); });
+document.querySelectorAll('.photo-item').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    openLB(a.href);
+  });
+});
+</script>
+</body>
+</html>

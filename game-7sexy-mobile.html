@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>7 Sexy Sins — Mobile Version (Google Play) | Zai Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07090f;--bg2:#0d1017;--accent:#4f7bff;--accent2:#6a9bff;--text:#e8eaf0;--muted:#8892a4;--border:rgba(79,123,255,0.15);--nav-h:72px}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+.bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(0,30,70,0.5) 0%,transparent 70%)}
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(7,9,15,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);z-index:100}
+.logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.logo-img{width:36px;height:36px;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#1a3a8a,#4f7bff)}
+.logo-img img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text b{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.08em;color:#fff}
+.logo-text span{font-size:0.58rem;letter-spacing:0.25em;color:var(--muted);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:0.05em;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.btn-nav{background:var(--accent);color:#fff!important;padding:0.55rem 1.4rem;border-radius:8px}
+main{padding-top:var(--nav-h);position:relative;z-index:1}
+.post-hero{position:relative;height:420px;overflow:hidden}
+.post-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.4)}
+.post-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,9,15,0.95) 0%,transparent 60%)}
+.post-hero-text{position:absolute;bottom:0;left:0;right:0;padding:2.5rem clamp(1.5rem,5vw,4rem)}
+.post-date{font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:0.25em;color:var(--accent);text-transform:uppercase;margin-bottom:0.5rem}
+.post-hero-text h1{font-family:'Rajdhani',sans-serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:#fff;line-height:1.1}
+.post-content{max-width:860px;margin:0 auto;padding:3rem clamp(1.5rem,5vw,4rem) 5rem}
+.back-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--muted);text-decoration:none;font-family:'Rajdhani',sans-serif;font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2.5rem;transition:color 0.2s}
+.back-link:hover{color:var(--accent)}
+.post-content p{color:var(--muted);margin-bottom:1.2rem;line-height:1.85;font-size:0.95rem}
+.post-content h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.5rem;color:#fff;margin:2.5rem 0 0.75rem;border-left:3px solid var(--accent);padding-left:0.75rem}
+.post-content h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.1rem;color:var(--accent2);margin:1.5rem 0 0.5rem}
+.post-content ul{color:var(--muted);margin:0.5rem 0 1.2rem 1.5rem;display:flex;flex-direction:column;gap:0.6rem;font-size:0.95rem;line-height:1.8}
+.post-content ol{color:var(--muted);margin:0.5rem 0 1.2rem 1.5rem;display:flex;flex-direction:column;gap:0.6rem;font-size:0.95rem;line-height:1.8}
+.post-content a{color:var(--accent)}
+.info-table{width:100%;border-collapse:collapse;margin:1.5rem 0;border:1px solid var(--border)}
+.info-table td{padding:0.75rem 1rem;border-bottom:1px solid var(--border);font-size:0.9rem}
+.info-table td:first-child{color:var(--muted);width:160px;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:0.05em;background:rgba(255,255,255,0.02)}
+.info-table td:last-child{color:var(--text)}
+.post-img{width:100%;border:1px solid var(--border);margin:1.5rem 0;border-radius:6px;display:block}
+.post-img-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin:1.5rem 0}
+.post-img-grid img{width:100%;border-radius:6px;border:1px solid var(--border)}
+.btn-primary{display:inline-flex;align-items:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:0.9rem;padding:0.75rem 1.6rem;border-radius:50px;transition:all 0.2s;margin:0.25rem 0.25rem 0.25rem 0}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:var(--text);text-decoration:none;font-weight:500;font-size:0.9rem;padding:0.75rem 1.6rem;border-radius:50px;transition:all 0.2s;margin:0.25rem 0.25rem 0.25rem 0}
+.btn-ghost:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px)}
+.callout{background:rgba(79,123,255,0.06);border:1px solid var(--border);border-left:3px solid var(--accent);padding:1.25rem 1.5rem;margin:1.5rem 0;border-radius:0 8px 8px 0;font-style:italic;color:var(--muted);font-size:0.95rem}
+.roadmap{display:flex;flex-direction:column;gap:0;margin:1rem 0 1.5rem}
+.roadmap-item{display:flex;gap:1.5rem;padding:1rem 0;border-bottom:1px solid var(--border)}
+.roadmap-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-top:0.4rem;flex-shrink:0}
+.roadmap-item p{margin:0;color:var(--muted);font-size:0.9rem}
+.roadmap-item strong{color:#fff}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem clamp(1.5rem,5vw,4rem);position:relative;z-index:1;margin-top:4rem}
+.footer-bottom{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:var(--muted);font-size:0.8rem}</style>
+</head>
+<body>
+<div class="bg-canvas"></div>
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div>
+    <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="games.html" class="active">Our Games</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="post-hero">
+    <img src="https://static.wixstatic.com/media/6839ea_bc57b24ef0a64ebf8d90b1af66e73ecc~mv2.png/v1/fill/w_980,h_551,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/6839ea_bc57b24ef0a64ebf8d90b1af66e73ecc~mv2.png" alt="7 Sexy Sins — Mobile Version (Google Play)">
+    <div class="post-hero-overlay"></div>
+    <div class="post-hero-text">
+      <p class="post-date">October 14, 2021</p>
+      <h1>7 Sexy Sins — Mobile Version (Google Play)</h1>
+    </div>
+  </div>
+  <div class="post-content">
+    <a href="games.html" class="back-link">← Back to Our Games</a>
+    
+<div class="callout">"If you play this game in the mobile version, we can't add the clothes-destroying mode because we would be banned by Google Play Store :)"</div>
+
+<h2>About the Mobile Version</h2>
+<p>Play 2 episodes of 7 Sexy Sins on Android — available on Google Play Store. The mobile version complies with Google Play content guidelines, which means the clothes-destroying mode is not included.</p>
+<img class="post-img" src="https://static.wixstatic.com/media/6839ea_bc57b24ef0a64ebf8d90b1af66e73ecc~mv2.png/v1/fill/w_980,h_551,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/6839ea_bc57b24ef0a64ebf8d90b1af66e73ecc~mv2.png" alt="Mobile screenshot 1">
+<img class="post-img" src="https://static.wixstatic.com/media/6839ea_d38a70342aa0464882af6c60b06bec3c~mv2.png/v1/fill/w_980,h_551,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/6839ea_d38a70342aa0464882af6c60b06bec3c~mv2.png" alt="Mobile screenshot 2">
+
+<h2>Full Versions on Steam</h2>
+<a href="https://store.steampowered.com/app/1023740/7_Sexy_Sins/" target="_blank" class="btn-primary">7 Sexy Sins on Steam →</a>
+<a href="https://store.steampowered.com/app/1405660/Shoot_Shoot_My_Waifu/" target="_blank" class="btn-primary">Shoot Shoot My Waifu on Steam →</a>
+
+<h2>Original Version</h2>
+<a href="https://www.dlsite.com/maniax/work/=/product_id/RJ296459.html" target="_blank" class="btn-ghost">DLsite →</a>
+<a href="https://www.nutaku.net/games/7-sexy-sins-tadaima/" target="_blank" class="btn-ghost">Nutaku →</a>
+
+  </div>
+</main>
+<footer><div class="footer-bottom"><p>© 2021 by ZAI STUDIO CO., LTD.</p><a href="games.html" style="color:var(--accent);text-decoration:none;font-size:0.8rem;">← All Games</a></div></footer>
+</body>
+</html>

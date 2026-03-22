@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Buffet Fighting | Zai Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07090f;--bg2:#0d1017;--accent:#4f7bff;--accent2:#6a9bff;--text:#e8eaf0;--muted:#8892a4;--border:rgba(79,123,255,0.15);--nav-h:72px}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+.bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(0,30,70,0.5) 0%,transparent 70%)}
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(7,9,15,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);z-index:100}
+.logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.logo-img{width:36px;height:36px;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#1a3a8a,#4f7bff)}
+.logo-img img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text b{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.08em;color:#fff}
+.logo-text span{font-size:0.58rem;letter-spacing:0.25em;color:var(--muted);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:0.05em;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.btn-nav{background:var(--accent);color:#fff!important;padding:0.55rem 1.4rem;border-radius:8px}
+main{padding-top:var(--nav-h);position:relative;z-index:1}
+.post-wrap{max-width:760px;margin:0 auto;padding:2.5rem clamp(1.5rem,5vw,2.5rem) 6rem}
+.post-meta{color:var(--muted);font-size:0.82rem;margin-bottom:1rem}
+.post-wrap h1{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:1.5rem}
+.back-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--muted);text-decoration:none;font-family:'Rajdhani',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.75rem;transition:color 0.2s}
+.back-link:hover{color:var(--accent)}
+.post-body{font-size:1rem;line-height:1.85;color:var(--muted)}
+.post-body p{margin-bottom:1rem}
+.post-body h2{font-size:1.35rem;font-weight:700;color:#fff;margin:2.5rem 0 0.75rem;font-family:'Rajdhani',sans-serif}
+.post-body h3{font-size:1.1rem;font-weight:700;color:#fff;margin:1.75rem 0 0.6rem;font-family:'Rajdhani',sans-serif}
+.post-body h4{font-size:0.97rem;font-weight:600;color:var(--text);margin:1rem 0 0.4rem;font-style:italic}
+.tagline-h{font-style:italic;font-weight:700;font-size:1.05rem;color:var(--text);margin-bottom:0.15rem}
+.tagline-p{font-style:italic;font-size:0.97rem;color:var(--muted);margin-bottom:1rem;line-height:1.8}
+.tagline-p strong{font-style:italic;color:var(--text)}
+.info-line{font-size:0.97rem;margin-bottom:0.3rem}
+.info-line strong{color:#fff;font-weight:700}
+.post-body img.full-w{width:100%;border-radius:4px;margin:1.25rem 0;display:block}
+.post-body img.spin{max-width:270px;border-radius:4px;margin:1rem 0;display:block}
+
+/* ── PHOTO GRID — thumbnail squares, click to lightbox ── */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:1.25rem 0}
+.photo-item{display:block;overflow:hidden;border-radius:3px;cursor:zoom-in}
+.photo-grid .photo-item{aspect-ratio:1}
+.photo-grid .photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.25s,filter 0.25s;filter:brightness(0.9)}
+.photo-grid .photo-item:hover img{transform:scale(1.04);filter:brightness(1.05)}
+
+/* 2-col landscape for depa */
+.photo-grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:1.25rem 0;align-items:start}
+.photo-grid-2col .photo-item{display:block;overflow:hidden;border-radius:3px;cursor:zoom-in;aspect-ratio:16/9}
+.photo-grid-2col .photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:filter 0.25s;filter:brightness(0.9)}
+.photo-grid-2col .photo-item:hover img{filter:brightness(1.05)}
+
+/* Lightbox */
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.94);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out}
+#lb.open{display:flex}
+#lb img{max-width:94vw;max-height:94vh;object-fit:contain;border-radius:4px}
+#lb-close{position:fixed;top:1rem;right:1.5rem;color:#fff;font-size:2.2rem;cursor:pointer;background:none;border:none;opacity:0.7;line-height:1}
+#lb-close:hover{opacity:1}
+#lb-caption{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:0.8rem;font-family:'Outfit',sans-serif}
+
+.post-body ul{list-style:none;margin:0.5rem 0 1rem 0;display:flex;flex-direction:column;gap:0.65rem}
+.post-body ul li{padding-left:1.4rem;position:relative;font-size:0.97rem;color:var(--muted)}
+.post-body ul li::before{content:"•";color:var(--accent);position:absolute;left:0;font-size:1.1rem;top:-0.05rem}
+.post-body ul li strong,.post-body ul li b{color:#fff}
+.post-body ul.sub-list{margin-top:0.4rem;margin-left:1rem}
+.post-body ul.sub-list li{font-size:0.93rem}
+.roadmap{display:flex;flex-direction:column;margin:0.5rem 0 1.25rem}
+.rm-item{display:flex;gap:1rem;padding:0.75rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.rm-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:0.45rem}
+.rm-item p{margin:0;color:var(--muted);font-size:0.95rem}
+.rm-item p strong{color:#fff}
+.btn-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0 1.5rem}
+.btn-primary{display:inline-flex;align-items:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:0.9rem;padding:0.7rem 1.5rem;border-radius:50px;transition:all 0.2s}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:var(--text);text-decoration:none;font-weight:500;font-size:0.9rem;padding:0.7rem 1.5rem;border-radius:50px;transition:all 0.2s}
+.btn-ghost:hover{background:rgba(255,255,255,0.12)}
+
+.social-links{display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.25rem 0 1rem}
+.social-btn{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(79,123,255,0.1);border:1px solid rgba(79,123,255,0.3);color:var(--accent2);text-decoration:none;font-size:0.85rem;font-weight:500;padding:0.55rem 1.1rem;border-radius:50px;transition:all 0.2s;font-family:'Outfit',sans-serif}
+.social-btn:hover{background:rgba(79,123,255,0.2);transform:translateY(-2px)}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem clamp(1.5rem,5vw,4rem);position:relative;z-index:1;margin-top:4rem}
+.footer-bottom{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:var(--muted);font-size:0.8rem}
+/* Game embed */
+.game-embed-wrap{
+  position:relative;width:100%;max-width:960px;
+  background:#111;border-radius:10px;overflow:hidden;
+  border:1px solid var(--border);margin:1.5rem 0;
+}
+.game-embed-wrap iframe{
+  display:block;width:100%;height:560px;border:none;
+}
+.game-embed-label{
+  display:flex;align-items:center;gap:0.6rem;
+  font-family:'Rajdhani',sans-serif;font-size:0.75rem;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:0.75rem;
+}
+.game-embed-label::before{
+  content:'';display:block;width:8px;height:8px;
+  border-radius:50%;background:#4caf50;
+  box-shadow:0 0 6px #4caf50;animation:pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+/* step list */
+.step-list{list-style:none;margin:0.5rem 0 1rem;display:flex;flex-direction:column;gap:0.6rem}
+.step-list li{display:flex;gap:0.75rem;font-size:0.97rem;color:var(--muted)}
+.step-num{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1rem;color:var(--accent);flex-shrink:0;width:1.4rem}
+.step-list li strong{color:#fff}
+</style>
+</head>
+<body>
+<div class="bg-canvas"></div>
+
+<div id="lb" onclick="closeLB()">
+  <button id="lb-close" onclick="closeLB()">✕</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div>
+    <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="games.html" class="active">Our Games</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<main>
+<div class="post-wrap" style="max-width:980px">
+  <a href="games.html" class="back-link">← Back to Our Games</a>
+  <p class="post-meta">Oct 14, 2021 &nbsp;·&nbsp; Updated: Oct 25, 2021</p>
+  <h1>Buffet Fighting</h1>
+
+  <div class="post-body">
+
+    <p>กด <strong>Ctrl +</strong> เพื่อขยายหน้าจอตอนเล่น &nbsp;[รองรับ WebGL 2.0]</p>
+
+    <!-- LIVE GAME EMBED -->
+    <p class="game-embed-label">เล่นได้เลย — Live WebGL Game</p>
+    <div class="game-embed-wrap">
+      <iframe
+        src="https://itch.io/embed-upload/2487666?color=333333"
+        allowfullscreen
+        allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr"
+      ><a href="https://freetale.itch.io/buffetfighter">Play Buffet Fighter on itch.io</a></iframe>
+    </div>
+
+    <div class="btn-row">
+      <a href="https://freetale.itch.io/buffetfighter" target="_blank" class="btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px"><path d="M3.13 1.04C2.08 1.6.05 3.94 0 4.28v.94c0 1.19.92 2.2 1.75 2.2.98 0 1.8-.9 1.8-1.96 0 1.06.77 1.96 1.74 1.96.98 0 1.7-.9 1.7-1.96 0 1.06.82 1.96 1.8 1.96.97 0 1.7-.9 1.7-1.96 0 1.06.8 1.96 1.77 1.96s1.77-.9 1.77-1.96c0 1.06.74 1.96 1.71 1.96.98 0 1.75-.9 1.75-1.96 0 1.06.8 1.96 1.78 1.96C20.05 7.42 21 6.4 21 5.22v-.94C20.95 3.94 18.92 1.6 17.87 1.04 16.05.02 7.95.02 3.13 1.04zM4 9.1v9.4h13V9.1c-.48.27-1.04.43-1.66.43-.7 0-1.37-.22-1.84-.6-.47.38-1.13.6-1.83.6s-1.37-.22-1.84-.6c-.47.38-1.13.6-1.83.6s-1.37-.22-1.84-.6c-.47.38-1.14.6-1.84.6C5.04 9.53 4.48 9.37 4 9.1zm3 2.4h2v2H7v-2zm5 0h2v2h-2v-2z"/></svg>
+        เปิดใน itch.io
+      </a>
+    </div>
+
+    <!-- Score & Controls -->
+    <p style="margin-top:1rem"><em>ตารางคะแนน</em></p>
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;margin:0.75rem 0 1.5rem">
+      <a href="https://static.wixstatic.com/media/6839ea_161386b376454fb1a2a5de5e82753a1d~mv2.png/v1/fill/w_478,h_471,al_c,q_85,enc_avif,quality_auto/6839ea_161386b376454fb1a2a5de5e82753a1d~mv2.png" class="photo-item" style="border-radius:6px;overflow:hidden;display:block;max-width:280px">
+        <img src="https://static.wixstatic.com/media/6839ea_161386b376454fb1a2a5de5e82753a1d~mv2.png/v1/fill/w_478,h_471,al_c,q_85,enc_avif,quality_auto/6839ea_161386b376454fb1a2a5de5e82753a1d~mv2.png" alt="Scoreboard" style="width:100%;display:block">
+      </a>
+      <a href="https://static.wixstatic.com/media/6839ea_755aac3ab5a24849ba7edf45c74c69b7~mv2.png/v1/fill/w_360,h_171,al_c,q_85,enc_avif,quality_auto/6839ea_755aac3ab5a24849ba7edf45c74c69b7~mv2.png" class="photo-item" style="border-radius:6px;overflow:hidden;display:block;max-width:280px">
+        <img src="https://static.wixstatic.com/media/6839ea_755aac3ab5a24849ba7edf45c74c69b7~mv2.png/v1/fill/w_360,h_171,al_c,q_85,enc_avif,quality_auto/6839ea_755aac3ab5a24849ba7edf45c74c69b7~mv2.png" alt="Controls" style="width:100%;display:block">
+      </a>
+    </div>
+
+    <p>เกมของเราสามารถแชทพิมคุยกัน หรือกดปุ่มเพื่อใช้ Emoticon ได้</p>
+
+    <h2>วิธีเล่นเกมเนื้อย่างออนไลน์</h2>
+
+    <ol class="step-list">
+      <li><span class="step-num">1.</span><span>สร้างห้องใหม่ที่ <strong>Create Party</strong></span></li>
+      <li><span class="step-num">2.</span><span>รอเพื่อนกดปุ่ม <strong>Join Room</strong> ร่วมเล่นด้วย (เล่นด้วยกันสูงสุด 4 คน) — หากมีคนเข้ามาในห้องแล้วจะปรากฏมือคีบตะเกียบในมุมอื่นๆ ของโต๊ะ</span></li>
+    </ol>
+
+    <a href="https://static.wixstatic.com/media/6839ea_dd29c8d016ea44b396eeece51c83344b~mv2.png/v1/fill/w_953,h_544,al_c,q_90,enc_avif,quality_auto/6839ea_dd29c8d016ea44b396eeece51c83344b~mv2.png" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.25rem">
+      <img src="https://static.wixstatic.com/media/6839ea_dd29c8d016ea44b396eeece51c83344b~mv2.png/v1/fill/w_953,h_544,al_c,q_90,enc_avif,quality_auto/6839ea_dd29c8d016ea44b396eeece51c83344b~mv2.png" alt="Lobby" style="width:100%;display:block">
+    </a>
+
+    <ol class="step-list" start="3">
+      <li><span class="step-num">3.</span><span>เลือกระยะเวลาที่ต้องการเล่นเกม เมื่อพร้อมทุกคนแล้ว กด <strong>Start</strong></span></li>
+      <li><span class="step-num">4.</span><span>คีบเนื้อหรือผักย่างบนกระทะ</span></li>
+    </ol>
+
+    <a href="https://static.wixstatic.com/media/6839ea_e9e39153edd64642ae0389d0947dbd01~mv2.png/v1/fill/w_750,h_430,al_c,q_85,enc_avif,quality_auto/6839ea_e9e39153edd64642ae0389d0947dbd01~mv2.png" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.25rem">
+      <img src="https://static.wixstatic.com/media/6839ea_e9e39153edd64642ae0389d0947dbd01~mv2.png/v1/fill/w_750,h_430,al_c,q_85,enc_avif,quality_auto/6839ea_e9e39153edd64642ae0389d0947dbd01~mv2.png" alt="Cooking" style="width:100%;display:block">
+    </a>
+
+    <ol class="step-list" start="5">
+      <li><span class="step-num">5.</span><span>รอให้สุกแล้วคีบใส่ถ้วยของตัวเอง หรือคีบพริก หรือเนื้อไหม้ให้ผู้เล่นคนอื่น</span></li>
+    </ol>
+
+    <a href="https://static.wixstatic.com/media/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.png/v1/fill/w_750,h_430,al_c,q_85,enc_avif,quality_auto/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.png" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.25rem">
+      <img src="https://static.wixstatic.com/media/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.png/v1/fill/w_750,h_430,al_c,q_85,enc_avif,quality_auto/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.png" alt="Fighting" style="width:100%;display:block">
+    </a>
+
+    <ol class="step-list" start="6">
+      <li><span class="step-num">6.</span><span>เมื่อหมดเวลา ผู้ที่ได้คะแนนสูงสุดจะเป็น <strong>ผู้ชนะ</strong></span></li>
+    </ol>
+
+    <div class="callout" style="margin-top:2rem">
+      "จากการแข่งขัน Gamejam หัวข้อ 'คืนสู่เหย้า' พวกเรา 4 คน ได้ไอเดียในช่วง Work From Home ในขณะที่ทุกคนไม่สามารถนัดเจอเพื่อกินหมูกระทะด้วยกันได้ เกมนี้ถูกสร้างขึ้นในเวลา 48 ชม. เท่านั้น สุดท้ายจึงเกิดเป็นเกมหมูกระทะออนไลน์นี้ ขอให้สนุกนะคะ"
+    </div>
+
+  </div>
+</div>
+</main>
+
+<footer><div class="footer-bottom"><p>© 2021 by ZAI STUDIO CO., LTD.</p><a href="games.html" style="color:var(--accent);text-decoration:none;font-size:0.8rem;">← All Games</a></div></footer>
+
+<script>
+function openLB(src) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLB() {
+  document.getElementById('lb').classList.remove('open');
+  document.getElementById('lb-img').src = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLB(); });
+document.querySelectorAll('.photo-item').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    openLB(a.href);
+  });
+});
+</script>
+</body>
+</html>

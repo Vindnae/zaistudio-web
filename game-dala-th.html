@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dala and the Cursed Forest [Thai Press Kit] | Zai Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07090f;--bg2:#0d1017;--accent:#4f7bff;--accent2:#6a9bff;--text:#e8eaf0;--muted:#8892a4;--border:rgba(79,123,255,0.15);--nav-h:72px}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+.bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(0,30,70,0.5) 0%,transparent 70%)}
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(7,9,15,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);z-index:100}
+.logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.logo-img{width:36px;height:36px;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#1a3a8a,#4f7bff)}
+.logo-img img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text b{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.08em;color:#fff}
+.logo-text span{font-size:0.58rem;letter-spacing:0.25em;color:var(--muted);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:0.05em;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.btn-nav{background:var(--accent);color:#fff!important;padding:0.55rem 1.4rem;border-radius:8px}
+main{padding-top:var(--nav-h);position:relative;z-index:1}
+.post-wrap{max-width:760px;margin:0 auto;padding:2.5rem clamp(1.5rem,5vw,2.5rem) 6rem}
+.post-meta{color:var(--muted);font-size:0.82rem;margin-bottom:1rem}
+.post-wrap h1{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:1.5rem}
+.back-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--muted);text-decoration:none;font-family:'Rajdhani',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.75rem;transition:color 0.2s}
+.back-link:hover{color:var(--accent)}
+.post-body{font-size:1rem;line-height:1.85;color:var(--muted)}
+.post-body p{margin-bottom:1rem}
+.post-body h2{font-size:1.35rem;font-weight:700;color:#fff;margin:2.5rem 0 0.75rem;font-family:'Rajdhani',sans-serif}
+.post-body h3{font-size:1.1rem;font-weight:700;color:#fff;margin:1.75rem 0 0.6rem;font-family:'Rajdhani',sans-serif}
+.post-body h4{font-size:0.97rem;font-weight:600;color:var(--text);margin:1rem 0 0.4rem;font-style:italic}
+.tagline-h{font-style:italic;font-weight:700;font-size:1.05rem;color:var(--text);margin-bottom:0.15rem}
+.tagline-p{font-style:italic;font-size:0.97rem;color:var(--muted);margin-bottom:1rem;line-height:1.8}
+.tagline-p strong{font-style:italic;color:var(--text)}
+.info-line{font-size:0.97rem;margin-bottom:0.3rem}
+.info-line strong{color:#fff;font-weight:700}
+.post-body img.full-w{width:100%;border-radius:4px;margin:1.25rem 0;display:block}
+.post-body img.spin{max-width:270px;border-radius:4px;margin:1rem 0;display:block}
+
+/* ── PHOTO GRID — thumbnail squares, click to lightbox ── */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:1.25rem 0}
+.photo-item{display:block;overflow:hidden;border-radius:3px;cursor:zoom-in}
+.photo-grid .photo-item{aspect-ratio:1}
+.photo-grid .photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.25s,filter 0.25s;filter:brightness(0.9)}
+.photo-grid .photo-item:hover img{transform:scale(1.04);filter:brightness(1.05)}
+
+/* 2-col landscape for depa */
+.photo-grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:1.25rem 0;align-items:start}
+.photo-grid-2col .photo-item{display:block;overflow:hidden;border-radius:3px;cursor:zoom-in;aspect-ratio:16/9}
+.photo-grid-2col .photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:filter 0.25s;filter:brightness(0.9)}
+.photo-grid-2col .photo-item:hover img{filter:brightness(1.05)}
+
+/* Lightbox */
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.94);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out}
+#lb.open{display:flex}
+#lb img{max-width:94vw;max-height:94vh;object-fit:contain;border-radius:4px}
+#lb-close{position:fixed;top:1rem;right:1.5rem;color:#fff;font-size:2.2rem;cursor:pointer;background:none;border:none;opacity:0.7;line-height:1}
+#lb-close:hover{opacity:1}
+#lb-caption{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:0.8rem;font-family:'Outfit',sans-serif}
+
+.post-body ul{list-style:none;margin:0.5rem 0 1rem 0;display:flex;flex-direction:column;gap:0.65rem}
+.post-body ul li{padding-left:1.4rem;position:relative;font-size:0.97rem;color:var(--muted)}
+.post-body ul li::before{content:"•";color:var(--accent);position:absolute;left:0;font-size:1.1rem;top:-0.05rem}
+.post-body ul li strong,.post-body ul li b{color:#fff}
+.post-body ul.sub-list{margin-top:0.4rem;margin-left:1rem}
+.post-body ul.sub-list li{font-size:0.93rem}
+.roadmap{display:flex;flex-direction:column;margin:0.5rem 0 1.25rem}
+.rm-item{display:flex;gap:1rem;padding:0.75rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.rm-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:0.45rem}
+.rm-item p{margin:0;color:var(--muted);font-size:0.95rem}
+.rm-item p strong{color:#fff}
+.btn-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0 1.5rem}
+.btn-primary{display:inline-flex;align-items:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:0.9rem;padding:0.7rem 1.5rem;border-radius:50px;transition:all 0.2s}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:var(--text);text-decoration:none;font-weight:500;font-size:0.9rem;padding:0.7rem 1.5rem;border-radius:50px;transition:all 0.2s}
+.btn-ghost:hover{background:rgba(255,255,255,0.12)}
+
+.social-links{display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.25rem 0 1rem}
+.social-btn{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(79,123,255,0.1);border:1px solid rgba(79,123,255,0.3);color:var(--accent2);text-decoration:none;font-size:0.85rem;font-weight:500;padding:0.55rem 1.1rem;border-radius:50px;transition:all 0.2s;font-family:'Outfit',sans-serif}
+.social-btn:hover{background:rgba(79,123,255,0.2);transform:translateY(-2px)}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem clamp(1.5rem,5vw,4rem);position:relative;z-index:1;margin-top:4rem}
+.footer-bottom{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:var(--muted);font-size:0.8rem}</style>
+</head>
+<body>
+<div class="bg-canvas"></div>
+
+<div id="lb" onclick="closeLB()">
+  <button id="lb-close" onclick="closeLB()">✕</button>
+  <img id="lb-img" src="" alt="">
+  <div id="lb-caption"></div>
+</div>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div>
+    <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="games.html" class="active">Our Games</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<main>
+<div class="post-wrap">
+  <a href="games.html" class="back-link">← Back to Our Games</a>
+  <p class="post-meta">Aug 12, 2024 &nbsp;·&nbsp; Updated: Mar 3, 2025</p>
+  <h1>Dala and the Cursed Forest [Thai Press Kit]</h1>
+
+  <div class="post-body">
+
+    <img class="full-w" src="assets/images/6839ea_12f296ef813045aa9d63e055b48754bf_mv2.png" alt="Dala and the Cursed Forest">
+
+    <p class="tagline-h"><em>หลอมรวมการ์ด... ปลดปล่อยจิตวิญญาณ... เขียนโชคชะตาของคุณใหม่...</em></p>
+    <p class="tagline-p"><em><strong>Dala and the Cursed Forest</strong> ดาหลากับป่าต้องสาป เป็นเกมแนว Dark Fantasy Roguelike Deckbuilder เรื่องราวของหญิงสาวผู้ติดอยู่ในวงล้อโชคชะตาที่ไม่มีวันสิ้นสุด ระบบ <strong>Card Fusion</strong> จะแปลงร่างของเธอ จะกำหนดแนวทางการเล่นของคุณใหม่ทั้งหมด ทุกการตัดสินใจมีผลตามมาเสมอ จงทำลายคำสาปนี้ให้ได้ก่อนที่มันจะกลืนกินคุณ</em></p>
+
+    <p class="info-line"><strong>ชื่อเกม :</strong> Dala and the Cursed Forest</p>
+    <p class="info-line"><strong>แนวเกม :</strong> Roguelike Deckbuilder, Strategy, Turn-Based</p>
+    <p class="info-line"><strong>แพลตฟอร์ม :</strong> PC (Steam)</p>
+    <p class="info-line"><strong>ผู้พัฒนา :</strong> Zai Studio</p>
+    <p class="info-line"><strong>Wishlist now on Steam :</strong> <a href="https://store.steampowered.com/app/2748770/Dala_and_The_Cursed_Forest" target="_blank" style="color:var(--accent)">https://store.steampowered.com/app/2748770/Dala_and_The_Cursed_Forest</a></p>
+    <p><a href="https://www.youtube.com/watch?v=SczMCBE5jcY" target="_blank" style="color:var(--accent)">https://www.youtube.com/watch?v=SczMCBE5jcY</a></p>
+
+    <div class="btn-row">
+      <a href="https://store.steampowered.com/app/2748770/Dala_and_The_Cursed_Forest" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.37l3.03-6.27A3.5 3.5 0 0 1 12 10.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5 3.5 3.5 0 0 1-2.12-.71L6.3 20.53A12 12 0 0 0 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg>
+        Wishlist บน Steam
+      </a>
+      <a href="https://www.youtube.com/watch?v=SczMCBE5jcY" target="_blank" class="btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.75 15.5V8.5l6.25 3.5-6.25 3.5z"/></svg>
+        ชมตัวอย่าง
+      </a>
+    </div>
+
+    <h2>ทำไมคุณถึงไม่ควรพลาดเกมนี้</h2>
+    <ul>
+      <li><strong>Fusion is Power (พลังแห่งการรวมการ์ด):</strong> อย่าแค่ใช้การ์ดใบเดียว... แต่จงรวมมันเข้าด้วยกัน! ผสมการ์ดเพื่อสร้าง Synergy และปลดล็อกการ์ดเวอร์ชั่นที่แข็งแกร่งกว่าเดิม การค้นหาคอมโบที่สมบูรณ์แบบคือหนทางสู่ชัยชนะ</li>
+      <li><strong>Cool Transformations (การแปลงร่าง):</strong> เมื่อสะสม "Cells" ได้ครบ ดาหลาจะสามารถแปลงร่างเป็นร่างที่ทรงพลังแตกต่างกัน ทุกการวิวัฒนาการจะเปลี่ยนวิธีการต่อสู้ของคุณไปอย่างสิ้นเชิง</li>
+      <li><strong>Unique Fantasy Art Style (งานภาพที่เป็นเอกลักษณ์):</strong> ก้าวเข้าสู่โลกดาร์กแฟนตาซีที่ได้รับแรงบันดาลใจจากตำนานป่าหิมพานต์และนิทานพื้นบ้านไทย สัมผัสความลึกลับที่แตกต่างจากเกม Roguelike ทั่วไปในตลาด</li>
+      <li><strong>Thai Cuisine &amp; Lucky Shop (ครัวไทยและร้านค้าเสี่ยงโชค):</strong> แวะเติมพลังที่ร้านอาหารด้วยเมนูอาหารไทยต้นตำรับเพื่อรับพลังสนับสนุน หรือถ้าคุณดวงดี ลองสุ่ม <strong>Gacha Box</strong> ในร้านค้าเพื่อรับไอเทมแรร์และอัปเกรดการผจญภัยของคุณ!</li>
+    </ul>
+
+    <div class="photo-grid">
+  <a href="assets/images/6839ea_5b33a95b38c343a491e5cd963114dc1c_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_5b33a95b38c343a491e5cd963114dc1c_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_de81d3d0d5e9472f8a7e12c51c5706c6_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_de81d3d0d5e9472f8a7e12c51c5706c6_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_7ca77689b71b41b791f1ddff70b07945_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_7ca77689b71b41b791f1ddff70b07945_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_b2c6f3f6c5d54a4e9a1b0300704890c3_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_b2c6f3f6c5d54a4e9a1b0300704890c3_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_c5039fdcbf3744aea8fab45970ce3731_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_c5039fdcbf3744aea8fab45970ce3731_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_d517db9c49aa4525af089aed0984fbbe_mv2.webp" class="photo-item"><img src="assets/images/6839ea_d517db9c49aa4525af089aed0984fbbe_mv2.webp" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_a1c7cf68e1a442b8a68e36b7d69820bf_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_a1c7cf68e1a442b8a68e36b7d69820bf_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_07a3db8f87a9455e9f550ed3e27ea9a7_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_07a3db8f87a9455e9f550ed3e27ea9a7_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_f0e0802a80d8472ca49ecb32714c3ab2_mv2.png" class="photo-item"><img src="assets/images/6839ea_f0e0802a80d8472ca49ecb32714c3ab2_mv2.png" loading="lazy" alt=""></a>
+</div>
+
+    <p><strong>Dala and the Cursed Forest ได้เข้าร่วมโครงการ depa Game Accelerator Program (Batch 2) และคว้ารางวัลชนะเลิศในสาขา Strategy Game</strong> ชัยชนะครั้งนี้คือจุดเปลี่ยนสำคัญที่ยืนยันวิสัยทัศน์และผลักดันให้เรามุ่งมั่นนำประสบการณ์ที่ได้รับแรงบันดาลใจจากวัฒนธรรมไทยนี้ไปสู่ระดับโลก</p>
+
+    <div class="photo-grid-2col">
+  <a href="assets/images/6839ea_89941f1e88f64b8a932caab2ee324762_mv2.png" class="photo-item"><img src="assets/images/6839ea_89941f1e88f64b8a932caab2ee324762_mv2.png" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_d8d7479dea8540e2a37a46c3d7d9dc0b_mv2.png" class="photo-item"><img src="assets/images/6839ea_d8d7479dea8540e2a37a46c3d7d9dc0b_mv2.png" loading="lazy" alt=""></a>
+</div>
+
+    <p><strong>แนวคิดของเกม (Game Concept) :</strong></p>
+    <img class="full-w" src="assets/gif/6839ea_2a3934613a1c45a9b82f03820c505e5d_mv2.gif" alt="Game Concept">
+
+    <h2>ศิลปะแห่งการหลอมรวมการ์ด</h2>
+    <p>Dala and the Cursed Forest แปลงร่างผ่านการฟิวชั่น ผสมการ์ดเพื่อสร้าง Cells ปลดล็อกร่างใหม่ และกำหนดแนวทางการเล่น (Build) ของคุณใหม่ได้ตลอดเวลาระหว่างการเล่น</p>
+    <img class="full-w" src="assets/gif/6839ea_9f8d83673c524e998caae1e081b22594_mv2.gif" alt="Card Fusion">
+    <p>ทุกการตัดสินใจจะเปลี่ยนกลยุทธ์ จุดแข็ง และความเสี่ยงของคุณแบบ Real-time <strong>นี่ไม่ใช่แค่การสร้างสำรับการ์ด แต่มันคือการวิวัฒนาการ</strong></p>
+
+    <h2>ระบบแปลงร่างระหว่างการเดินทาง</h2>
+    <p>รวบรวม Cells ที่สอดคล้องกันเพื่อปลุกพลังร่างจำแลงอื่นๆ แต่ละร่างจะมอบความสามารถใหม่ การ์ดเฉพาะตัว และรูปแบบการต่อสู้ที่ต่างออกไป การกลายร่างไม่ใช่แค่โบนัส แต่มันคือการเปลี่ยนวิธีการเล่นและวิธีที่คุณจะเอาชนะศัตรู</p>
+    <p><strong>การผจญภัยที่ไม่ซ้ำรอยเดิม</strong> ไม่มีการเดินทางครั้งใดในป่าต้องสาปที่จะเหมือนเดิม</p>
+    <img class="full-w" src="assets/images/6839ea_143ec994f20340648c7dea3b49ad404d_mv2.png" alt="Starting decks">
+    <h4>เลือกเด็คเริ่มต้นที่แตกต่าง ค้นพบการ์ดและไอเทมใหม่ๆ เผชิญกับเหตุการณ์ลึกลับที่อาจมอบพรหรือคำสาปให้กับคุณ ทุกทางเลือกล้วนมีความหมาย...</h4>
+
+    <h2>ป่าต้องสาปที่ได้รับแรงบันดาลใจจากตำนาน</h2>
+    <p>เผชิญหน้ากับสัตว์หิมพานต์และวิญญาณร้ายจากคำสาปร้าย ยิ่งคุณถลำลึกเข้าไป ก็จะยิ่งเจอความโหดร้ายจากโลกแห่งนี้</p>
+    <img class="full-w" src="assets/gif/6839ea_36a49fa5764e4f669eefd619820c338e_mv2.gif" alt="Forest enemies">
+    <p><strong>กิน เตรียมตัว และอยู่รอด</strong></p>
+    <p>แวะพักที่ร้านอาหารจากครัวเจ๊เหมียว อิ่มอร่อยกับอาหารไทยเพื่อรับบัฟสำคัญ เตรียมตัวให้พร้อมก่อนจะเผชิญหน้ากับความท้าทายข้างหน้า</p>
+
+    <h2>เปิดเผยความจริงภายใต้คำสาป</h2>
+    <p>เมื่อคุณเดินทางไปได้ไกลขึ้น เนื้อเรื่องและเศษเสี้ยวความทรงจำใหม่ๆ จะถูกปลดล็อก เชื่อมโยงชะตากรรมของป่าต้องสาปและค้นหาความจริงเบื้องหลังวงจรที่ไม่จบสิ้นของดาลา ทุกรอบการเล่นจะทำให้คุณเข้าใกล้ความจริงที่จองจำเธอไว้</p>
+    <img class="full-w" src="assets/images/6839ea_73911339c5ba49dd9cb8e530364748aa_mv2.png" alt="Story">
+
+    <p><strong>สิ่งที่จะมาพร้อมกับเกมเวอร์ชั่นเต็ม (กลางปี 2026)</strong></p>
+    <p>เรามุ่งมั่นพัฒนาอย่างหนักเพื่อเตรียมพร้อมสำหรับการเปิดตัวอย่างเป็นทางการ:</p>
+    <ul>
+      <li><strong>Wow Moments ที่มากขึ้น:</strong> เรากำลังอัปเกรดการรวมการ์ดให้ทรงพลังและน่าตื่นตาตื่นใจกว่าเดิม</li>
+      <li><strong>4 รูปแบบการเล่นที่แตกต่าง:</strong> เลือกใช้ 4 สำรับเทพเจ้า (God Decks) ที่มีเอกลักษณ์เฉพาะตัว:
+        <ul class="sub-list">
+          <li><strong>The Fighter:</strong> เด็คสายบู๊ที่เน้นการสร้างเกราะและการโจมตี พร้อมเผาผลาญศัตรูด้วยสถานะ Burn</li>
+          <li><strong>The Summoner:</strong> ผสมการ์ดเพื่ออัญเชิญพืชมีชีวิตออกมาช่วยคุณสู้</li>
+          <li><strong>The Debuff Spammer:</strong> สะสมคำสาปใส่ศัตรูและรอดูพวกมันระเบิด!</li>
+          <li><strong>The Magic Weaver:</strong> สร้างอาณาเขตพิเศษ บนสนามรบเพื่อเพิ่มพลังมหาศาลให้กับคาถาของคุณ</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="photo-grid">
+  <a href="assets/images/6839ea_640c80001d974775b8c269a7d8b08d18_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_640c80001d974775b8c269a7d8b08d18_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_e74ef2aeb0fe4e6ba6793ac8d1c25e15_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_e74ef2aeb0fe4e6ba6793ac8d1c25e15_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_781a39dceafe40c4af088b576a89c642_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_781a39dceafe40c4af088b576a89c642_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_8ff16e8f3b5a42b5a7c5e6c66f928265_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_8ff16e8f3b5a42b5a7c5e6c66f928265_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_12c4ad0527124c00afda8ab8b7cbca45_mv2.png" class="photo-item"><img src="assets/images/6839ea_12c4ad0527124c00afda8ab8b7cbca45_mv2.png" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_969bfd1ccce0483ba4743a4ef868a162_mv2.png" class="photo-item"><img src="assets/images/6839ea_969bfd1ccce0483ba4743a4ef868a162_mv2.png" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_cd28cc6245494e89b471cc6ab059e004_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_cd28cc6245494e89b471cc6ab059e004_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_66fd378693614c2b85b020ab06c7d817_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_66fd378693614c2b85b020ab06c7d817_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_1e0ea0d237354894b7abe28318601162_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_1e0ea0d237354894b7abe28318601162_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_afedf59360414501871d3f46f428688f_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_afedf59360414501871d3f46f428688f_mv2.jpg" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_719d36f258c64f298ef720370f6134a2_mv2.png" class="photo-item"><img src="assets/images/6839ea_719d36f258c64f298ef720370f6134a2_mv2.png" loading="lazy" alt=""></a>
+  <a href="assets/images/6839ea_dfb3e41e342a4141bfbc293dd4bae484_mv2.jpg" class="photo-item"><img src="assets/images/6839ea_dfb3e41e342a4141bfbc293dd4bae484_mv2.jpg" loading="lazy" alt=""></a>
+</div>
+
+    <h3>แผนการพัฒนา (Roadmap)</h3>
+    <div class="roadmap">
+      <div class="rm-item"><div class="rm-dot"></div><p><strong>ปัจจุบัน:</strong> อัปเดต Demo ฟรีอย่างต่อเนื่องตามคำแนะนำของผู้เล่น</p></div>
+      <div class="rm-item"><div class="rm-dot"></div><p><strong>ต้นปี 2026:</strong> อัปเดตครั้งใหญ่สำหรับ Steam Next Fest</p></div>
+      <div class="rm-item"><div class="rm-dot"></div><p><strong>กลางปี 2026:</strong> <strong>วางจำหน่ายเกมฉบับเต็ม!</strong></p></div>
+    </div>
+
+    <p>ลองเล่น Demo และเพิ่มเข้า Wishlist บน Steam ได้แล้ววันนี้! <a href="https://store.steampowered.com/app/2748770/Dala_and_The_Cursed_Forest" target="_blank" style="color:var(--accent)">https://store.steampowered.com/app/2748770/Dala_and_The_Cursed_Forest</a></p>
+
+    <img class="spin" src="assets/gif/6839ea_2c31cfe151234ead86f3f90f4397dad5_mv2.gif" alt="Dala spin" width="270" height="269" style="max-width:270px;height:auto">
+
+    <p style="margin-bottom:0.75rem">ติดตามพวกเราเพิ่มเติมได้ที่:</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/dalazaistudio/" target="_blank" class="social-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg>
+        Facebook
+      </a>
+      <a href="https://discord.gg/JC8buyJCJW" target="_blank" class="social-btn" style="background:rgba(88,101,242,0.15);border-color:rgba(88,101,242,0.4);color:#7289da">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.55 3c-.21.38-.46.9-.63 1.3a18.3 18.3 0 0 0-5.84 0C8.91 3.9 8.65 3.38 8.44 3A19.7 19.7 0 0 0 3.67 4.37C.53 9.15-.32 13.82.1 18.42a20.1 20.1 0 0 0 6.15 3.12c.5-.68.94-1.4 1.32-2.16a13 13 0 0 1-2.08-1c.17-.13.34-.26.5-.4a14.3 14.3 0 0 0 12.24 0l.5.4a13 13 0 0 1-2.09 1c.38.76.82 1.48 1.33 2.16a20 20 0 0 0 6.16-3.12c.5-5.28-.85-9.87-3.81-14.05zM8.02 15.63c-1.26 0-2.3-1.17-2.3-2.6s1.02-2.6 2.3-2.6c1.27 0 2.32 1.16 2.3 2.6 0 1.43-1.02 2.6-2.3 2.6zm7.96 0c-1.27 0-2.3-1.17-2.3-2.6s1.01-2.6 2.3-2.6c1.27 0 2.31 1.16 2.3 2.6 0 1.43-1.02 2.6-2.3 2.6z"/></svg>
+        Discord
+      </a>
+      <a href="https://twitter.com/Dalazaistudio" target="_blank" class="social-btn" style="background:rgba(29,161,242,0.1);border-color:rgba(29,161,242,0.35);color:#1da1f2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.24 2h3.54l-7.74 8.85L23 22h-7.13l-5.58-7.3L4.3 22H.75l8.28-9.46L1 2h7.31l5.04 6.6L18.24 2zm-1.24 18h1.96L7.08 4H4.98L17 20z"/></svg>
+        Twitter / X
+      </a>
+    </div>
+
+  </div>
+</div>
+</main>
+
+<footer><div class="footer-bottom"><p>© 2021 by ZAI STUDIO CO., LTD.</p><a href="games.html" style="color:var(--accent);text-decoration:none;font-size:0.8rem;">← All Games</a></div></footer>
+
+<script>
+// Lightbox
+function openLB(src) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLB() {
+  document.getElementById('lb').classList.remove('open');
+  document.getElementById('lb-img').src = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLB(); });
+document.querySelectorAll('.photo-item').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    openLB(a.href);
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>7 Sins: Lost in Labyrinth | Zai Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07090f;--bg2:#0d1017;--accent:#4f7bff;--accent2:#6a9bff;--text:#e8eaf0;--muted:#8892a4;--border:rgba(79,123,255,0.15);--nav-h:72px}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
+.bg-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(0,30,70,0.5) 0%,transparent 70%)}
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(7,9,15,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1.5rem,5vw,4rem);z-index:100}
+.logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
+.logo-img{width:36px;height:36px;border-radius:8px;overflow:hidden;background:linear-gradient(135deg,#1a3a8a,#4f7bff)}
+.logo-img img{width:100%;height:100%;object-fit:contain}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text b{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.08em;color:#fff}
+.logo-text span{font-size:0.58rem;letter-spacing:0.25em;color:var(--muted);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:0.9rem;letter-spacing:0.05em;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.btn-nav{background:var(--accent);color:#fff!important;padding:0.55rem 1.4rem;border-radius:8px}
+main{padding-top:var(--nav-h);position:relative;z-index:1}
+.post-wrap{max-width:760px;margin:0 auto;padding:2.5rem clamp(1.5rem,5vw,2.5rem) 6rem}
+.post-meta{color:var(--muted);font-size:0.82rem;margin-bottom:1rem}
+.post-wrap h1{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:1.5rem}
+.back-link{display:inline-flex;align-items:center;gap:0.4rem;color:var(--muted);text-decoration:none;font-family:'Rajdhani',sans-serif;font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.75rem;transition:color 0.2s}
+.back-link:hover{color:var(--accent)}
+.post-body{font-size:1rem;line-height:1.85;color:var(--muted)}
+.post-body p{margin-bottom:1rem}
+.post-body h2{font-size:1.35rem;font-weight:700;color:#fff;margin:2.5rem 0 0.75rem;font-family:'Rajdhani',sans-serif}
+.post-body h3{font-size:1.1rem;font-weight:700;color:#fff;margin:1.75rem 0 0.6rem;font-family:'Rajdhani',sans-serif}
+.post-body h4{font-size:0.97rem;font-weight:600;color:var(--text);margin:1rem 0 0.4rem;font-style:italic}
+.tagline-h{font-style:italic;font-weight:700;font-size:1.05rem;color:var(--text);margin-bottom:0.15rem}
+.tagline-p{font-style:italic;font-size:0.97rem;color:var(--muted);margin-bottom:1rem;line-height:1.8}
+.tagline-p strong{font-style:italic;color:var(--text)}
+.info-line{font-size:0.97rem;margin-bottom:0.3rem}
+.info-line strong{color:#fff;font-weight:700}
+.post-body img.full-w{width:100%;border-radius:4px;margin:1.25rem 0;display:block}
+.post-body img.spin{max-width:270px;border-radius:4px;margin:1rem 0;display:block}
+
+/* ── PHOTO GRID — thumbnail squares, click to lightbox ── */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin:1.25rem 0}
+.photo-item{display:block;overflow:hidden;border-radius:3px;cursor:zoom-in}
+.photo-grid .photo-item{aspect-ratio:1}
+.photo-grid .photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.25s,filter 0.25s;filter:brightness(0.9)}
+.photo-grid .photo-item:hover img{transform:scale(1.04);filter:brightness(1.05)}
+
+/* 2-col landscape for depa */
+.photo-grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:1.25rem 0;align-items:start}
+.photo-grid-2col .photo-item{display:block;overflow:hidden;border-radius:3px;cursor:zoom-in;aspect-ratio:16/9}
+.photo-grid-2col .photo-item img{width:100%;height:100%;object-fit:cover;display:block;transition:filter 0.25s;filter:brightness(0.9)}
+.photo-grid-2col .photo-item:hover img{filter:brightness(1.05)}
+
+/* Lightbox */
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.94);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out}
+#lb.open{display:flex}
+#lb img{max-width:94vw;max-height:94vh;object-fit:contain;border-radius:4px}
+#lb-close{position:fixed;top:1rem;right:1.5rem;color:#fff;font-size:2.2rem;cursor:pointer;background:none;border:none;opacity:0.7;line-height:1}
+#lb-close:hover{opacity:1}
+#lb-caption{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,0.5);font-size:0.8rem;font-family:'Outfit',sans-serif}
+
+.post-body ul{list-style:none;margin:0.5rem 0 1rem 0;display:flex;flex-direction:column;gap:0.65rem}
+.post-body ul li{padding-left:1.4rem;position:relative;font-size:0.97rem;color:var(--muted)}
+.post-body ul li::before{content:"•";color:var(--accent);position:absolute;left:0;font-size:1.1rem;top:-0.05rem}
+.post-body ul li strong,.post-body ul li b{color:#fff}
+.post-body ul.sub-list{margin-top:0.4rem;margin-left:1rem}
+.post-body ul.sub-list li{font-size:0.93rem}
+.roadmap{display:flex;flex-direction:column;margin:0.5rem 0 1.25rem}
+.rm-item{display:flex;gap:1rem;padding:0.75rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.rm-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:0.45rem}
+.rm-item p{margin:0;color:var(--muted);font-size:0.95rem}
+.rm-item p strong{color:#fff}
+.btn-row{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0 1.5rem}
+.btn-primary{display:inline-flex;align-items:center;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;font-size:0.9rem;padding:0.7rem 1.5rem;border-radius:50px;transition:all 0.2s}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);color:var(--text);text-decoration:none;font-weight:500;font-size:0.9rem;padding:0.7rem 1.5rem;border-radius:50px;transition:all 0.2s}
+.btn-ghost:hover{background:rgba(255,255,255,0.12)}
+
+.social-links{display:flex;flex-wrap:wrap;gap:0.6rem;margin:0.25rem 0 1rem}
+.social-btn{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(79,123,255,0.1);border:1px solid rgba(79,123,255,0.3);color:var(--accent2);text-decoration:none;font-size:0.85rem;font-weight:500;padding:0.55rem 1.1rem;border-radius:50px;transition:all 0.2s;font-family:'Outfit',sans-serif}
+.social-btn:hover{background:rgba(79,123,255,0.2);transform:translateY(-2px)}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem clamp(1.5rem,5vw,4rem);position:relative;z-index:1;margin-top:4rem}
+.footer-bottom{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:var(--muted);font-size:0.8rem}</style>
+</head>
+<body>
+<div class="bg-canvas"></div>
+
+<div id="lb" onclick="closeLB()">
+  <button id="lb-close" onclick="closeLB()">✕</button>
+  <img id="lb-img" src="" alt="">
+  <div id="lb-caption"></div>
+</div>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div>
+    <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="games.html" class="active">Our Games</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<main>
+<div class="post-wrap">
+  <a href="games.html" class="back-link">← Back to Our Games</a>
+  <p class="post-meta">Jan 30, 2023</p>
+  <h1>7 Sins: Lost in Labyrinth is ready!</h1>
+
+  <div class="post-body">
+
+    <p>JOIN OUR OFFICIAL DISCORD COMMUNITY</p>
+
+    <!-- Discord banner -->
+    <a href="https://discord.gg/tubT6W93M9" target="_blank" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.5rem">
+      <img src="assets/images/6839ea_d1cba110380c44c397495299c9110c68_mv2.png" alt="Join Discord" style="width:100%;display:block;filter:brightness(1);border-radius:6px">
+    </a>
+
+    <p>Get the latest news and chat directly with us: <a href="https://discord.gg/tubT6W93M9" target="_blank" style="color:var(--accent)">https://discord.gg/tubT6W93M9</a></p>
+
+    <div class="btn-row" style="margin-top:1.25rem">
+      <a href="https://discord.gg/tubT6W93M9" target="_blank" class="btn-primary" style="background:rgba(88,101,242,0.9);border:none">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.55 3c-.21.38-.46.9-.63 1.3a18.3 18.3 0 0 0-5.84 0C8.91 3.9 8.65 3.38 8.44 3A19.7 19.7 0 0 0 3.67 4.37C.53 9.15-.32 13.82.1 18.42a20.1 20.1 0 0 0 6.15 3.12c.5-.68.94-1.4 1.32-2.16a13 13 0 0 1-2.08-1c.17-.13.34-.26.5-.4a14.3 14.3 0 0 0 12.24 0l.5.4a13 13 0 0 1-2.09 1c.38.76.82 1.48 1.33 2.16a20 20 0 0 0 6.16-3.12c.5-5.28-.85-9.87-3.81-14.05zM8.02 15.63c-1.26 0-2.3-1.17-2.3-2.6s1.02-2.6 2.3-2.6c1.27 0 2.32 1.16 2.3 2.6 0 1.43-1.02 2.6-2.3 2.6zm7.96 0c-1.27 0-2.3-1.17-2.3-2.6s1.01-2.6 2.3-2.6c1.27 0 2.31 1.16 2.3 2.6 0 1.43-1.02 2.6-2.3 2.6z"/></svg>
+        Join Discord
+      </a>
+    </div>
+
+    <div class="btn-row" style="margin-top:0">
+      <a href="https://store.steampowered.com/app/2221820/7_Sins__Lost_in_Labyrinth/" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.37l3.03-6.27A3.5 3.5 0 0 1 12 10.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5 3.5 3.5 0 0 1-2.12-.71L6.3 20.53A12 12 0 0 0 12 24c6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg>
+        Play on Steam
+      </a>
+    </div>
+
+    <p style="margin-bottom:0.5rem"><strong>ABOUT THIS GAME</strong></p>
+
+    <!-- Gameplay GIF -->
+    <img class="full-w" src="assets/gif/6839ea_4eed88087b374b26a33ccc0d2024bf84_mv2.gif" alt="7 Sins: Lost in Labyrinth gameplay">
+
+    <p>To ye all naughty Sinners,<br>
+    Welcome to <strong>"7 Sins: Lost in Labyrinth"</strong><br>
+    A Survival Horror Game, based on the Cutie Characters and World of 7 Sexy Sins Series.</p>
+
+    <p>You have but one goal: <strong>survive and escape the hellish mazes!</strong><br>
+    Find the secrets and beware of the jump scares that will shake into your naughty heart!</p>
+
+    <!-- Story section -->
+    <img class="full-w" src="assets/images/6839ea_08dcbb394aa9407881d2f67e00805eca_mv2.png" alt="Story" style="max-width:500px">
+
+    <p>After graduated from High School,<br>
+    The "7 Sins" Girls have all left on their separate paths.</p>
+
+    <p>During a summer holiday, they decide to have a bikini reunion party at the seaside.
+    Chilling around the campfire, in the dead silence of night and with the cold wind blowing, each of them start telling a spooky story each.
+    After going to sleep, something unexpected and horrifying happens.</p>
+
+    <!-- Features section -->
+    <img class="full-w" src="assets/images/6839ea_a0760444175f4a469fa9f3e34cb4677f_mv2.png" alt="Features" style="max-width:500px">
+
+    <ul>
+      <li><strong>"Procedurally generated Maze"</strong> for Fresh Experiences on each Playthrough.</li>
+      <li><strong>"Use cool items"</strong> and discover to play pranks on or support your friends.</li>
+      <li><strong>"Ghosts of 7 Sins"</strong> will have their own otherworldly stage and unique gimmicks to threaten players, who will have to be very cunning and intuitive to evade their hunters.</li>
+      <li><strong>"Third-person pov"</strong> We understand that 1st-person games populated by this sub-genre can lead to motion sickness, and therefore we designed the game to utilize a 3rd-Person for more comfort while experiencing the horror and excitement at the same time.</li>
+      <li><strong>"More than 8 types of Special Missions"</strong> Which will grant unique experiences based on their Combination on each Playthrough.</li>
+      <li><strong>"Moe Cutie Girls"</strong> in their Bikinis, with eye-catching Boob Jiggling Physics to entertain ye naughty players!</li>
+    </ul>
+
+    <p><strong>Gameplay</strong></p>
+    <ul>
+      <li>Co-op 2~4 players</li>
+      <li>PVP 2 players</li>
+      <li>Solo</li>
+    </ul>
+
+    <!-- Camera Mode section -->
+    <img class="full-w" src="assets/images/6839ea_154f245489aa4bbd9761151fed732160_mv2.png" alt="Camera Mode" style="max-width:500px">
+
+    <ul>
+      <li><strong>Camera Mode</strong>
+        <ul class="sub-list">
+          <li>Players can find hidden stuffs that are not visible via standard POV.</li>
+          <li>Certain Horrors and Clues can only be seen via Camera's Lens.</li>
+          <li>Players can utilize Photo Mode at any time they wish.</li>
+        </ul>
+      </li>
+      <li>Unlock characters and dress them up in the sexy bikinis of your choice!</li>
+      <li>Take photos to temporarily stun the ghosts, or collect photos of the girls in various poses.<br>
+      And forever keep these photos in your naughty mind!</li>
+    </ul>
+
+    <p style="margin-top:1.5rem;margin-bottom:0.75rem">Follow us:</p>
+    <div class="social-links">
+      <a href="https://discord.gg/tubT6W93M9" target="_blank" class="social-btn" style="background:rgba(88,101,242,0.15);border-color:rgba(88,101,242,0.4);color:#7289da">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.55 3c-.21.38-.46.9-.63 1.3a18.3 18.3 0 0 0-5.84 0C8.91 3.9 8.65 3.38 8.44 3A19.7 19.7 0 0 0 3.67 4.37C.53 9.15-.32 13.82.1 18.42a20.1 20.1 0 0 0 6.15 3.12c.5-.68.94-1.4 1.32-2.16a13 13 0 0 1-2.08-1c.17-.13.34-.26.5-.4a14.3 14.3 0 0 0 12.24 0l.5.4a13 13 0 0 1-2.09 1c.38.76.82 1.48 1.33 2.16a20 20 0 0 0 6.16-3.12c.5-5.28-.85-9.87-3.81-14.05zM8.02 15.63c-1.26 0-2.3-1.17-2.3-2.6s1.02-2.6 2.3-2.6c1.27 0 2.32 1.16 2.3 2.6 0 1.43-1.02 2.6-2.3 2.6zm7.96 0c-1.27 0-2.3-1.17-2.3-2.6s1.01-2.6 2.3-2.6c1.27 0 2.31 1.16 2.3 2.6 0 1.43-1.02 2.6-2.3 2.6z"/></svg>
+        Discord
+      </a>
+    </div>
+
+  </div>
+</div>
+</main>
+
+<footer><div class="footer-bottom"><p>© 2021 by ZAI STUDIO CO., LTD.</p><a href="games.html" style="color:var(--accent);text-decoration:none;font-size:0.8rem;">← All Games</a></div></footer>
+
+<script>
+function openLB(src) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLB() {
+  document.getElementById('lb').classList.remove('open');
+  document.getElementById('lb-img').src = '';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLB(); });
+document.querySelectorAll('.photo-item').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    openLB(a.href);
+  });
+});
+</script>
+</body>
+</html>
