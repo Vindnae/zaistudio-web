@@ -21,7 +21,7 @@ Fuse cards in your hand. Transform in the middle of battle. Command plant allies
 powerful combos in a roguelike deckbuilder inspired by Thai mythology. The cards you combine
 generate Cells that unlock new forms, each with unique abilities and cards.
 
-Starting decks: Guwen (armor & fire), Tatara (plant allies), Vihok (chaining cards & poison),
+Starting decks: Guwen (armor & fire), Tatara (plant allies), Vihok (chaining cards, poison & Skycore, a special currency),
 Vipak (water & Naga hatchlings). All four are playable in Early Access.
 
 Awards: 1st place, Strategy Game category, depa Game Accelerator Program (Batch 2)
