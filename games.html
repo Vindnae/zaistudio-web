@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Games | Zai Studio</title>
-  <meta name="description" content="Games by Zai Studio — Dala and the Cursed Forest, 7 Sins: Lost in Labyrinth, Shoot Shoot My Waifu, Tamalist, and more.">
+<title>Our Games: Catalog | Zai Studio</title>
+  <link rel="canonical" href="https://www.zaistudio.net/games.html">
+  <meta name="description" content="All games by Zai Studio: Dala and the Cursed Forest, the 7 Sexy Sins series, Tamalist, Buffet Fighting and our Thai mobile apps, with store links.">
   <meta name="keywords" content="Zai Studio games, Dala Cursed Forest, 7 Sexy Sins, Tamalist, indie games Thailand">
   <meta name="author" content="Zai Studio">
   <meta property="og:title" content="Our Games | Zai Studio">
-  <meta property="og:description" content="Games by Zai Studio — Dala and the Cursed Forest, 7 Sins: Lost in Labyrinth, Shoot Shoot My Waifu, Tamalist, and more.">
+  <meta property="og:description" content="All games by Zai Studio: Dala and the Cursed Forest, the 7 Sexy Sins series, Tamalist, Buffet Fighting and our Thai mobile apps, with store links.">
   <meta property="og:image" content="https://www.zaistudio.net/assets/images/6839ea_12f296ef813045aa9d63e055b48754bf_mv2.png">
   <meta property="og:url" content="https://www.zaistudio.net/games.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Our Games | Zai Studio">
-  <meta name="twitter:description" content="Games by Zai Studio — Dala and the Cursed Forest, 7 Sins: Lost in Labyrinth, Shoot Shoot My Waifu, Tamalist, and more.">
+  <meta name="twitter:description" content="All games by Zai Studio: Dala and the Cursed Forest, the 7 Sexy Sins series, Tamalist, Buffet Fighting and our Thai mobile apps, with store links.">
   <meta name="twitter:image" content="https://www.zaistudio.net/assets/images/6839ea_12f296ef813045aa9d63e055b48754bf_mv2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -37,7 +38,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(7,9,
 main{padding-top:var(--nav-h);position:relative;z-index:1}
 .page-hero{padding:clamp(3rem,7vw,5.5rem) clamp(1.5rem,5vw,4rem) 2rem;max-width:1280px;margin:0 auto}
 .section-tag{font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:0.3em;color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem}
-.section-tag::before{content:'— '}
+.section-tag::before{content:'';display:inline-block;width:18px;height:2px;background:var(--accent);vertical-align:middle;margin-right:8px}
 .page-hero h1{font-family:'Rajdhani',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:#fff;margin-top:0.5rem}
 section{padding:0 clamp(1.5rem,5vw,4rem) clamp(3rem,7vw,5.5rem);max-width:1280px;margin:0 auto}
 .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin-top:1rem}
@@ -66,115 +67,148 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem cla
 .footer-col ul li a:hover{color:#fff}
 .footer-bottom{max-width:1280px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .footer-bottom p{color:var(--muted);font-size:0.8rem}
+.group-h{font-family:'Rajdhani',sans-serif;font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:700;color:#fff;margin:3rem 0 0.4rem}
+.group-p{color:var(--muted);font-size:0.92rem;margin-bottom:0.5rem;max-width:720px}
+.group-p a{color:var(--accent2);text-decoration:none}
+.game-card>a{text-decoration:none;display:block}
+.card-extras{padding:0 1.5rem 1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem 1rem;font-size:0.8rem}
+.card-extras a{color:var(--accent2);text-decoration:none}
+.card-extras a:hover{text-decoration:underline}
+.card-extras .lbl{color:var(--muted)}
+.version-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1rem;margin-top:1rem}
+.version-list li{display:flex;gap:1rem;align-items:center;border:1px solid var(--border);border-radius:10px;padding:0.75rem;background:rgba(255,255,255,0.02)}
+.version-list img{width:120px;aspect-ratio:16/9;object-fit:cover;border-radius:6px;flex-shrink:0}
+.version-list a{color:#fff;text-decoration:none;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1rem}
+.app-ico{text-decoration:none;width:64px;height:64px;overflow:hidden;border-radius:12px;background:rgba(79,123,255,0.12);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.app-name{color:#fff;font-weight:600;font-size:1rem}
+.app-ico img{width:100%;height:100%;object-fit:cover}
+.version-list p{color:var(--muted);font-size:0.8rem;line-height:1.5}
 @media(max-width:640px){.games-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr;gap:2rem}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://www.zaistudio.net/#website", "url": "https://www.zaistudio.net/", "name": "Zai Studio", "publisher": {"@id": "https://www.zaistudio.net/#org"}}, {"@type": "Organization", "@id": "https://www.zaistudio.net/#org", "name": "Zai Studio", "legalName": "ZAI STUDIO CO., LTD.", "url": "https://www.zaistudio.net/"}, {"@type": "CollectionPage", "@id": "https://www.zaistudio.net/games.html", "url": "https://www.zaistudio.net/games.html", "name": "Our Games: Catalog | Zai Studio", "inLanguage": "en", "isPartOf": {"@id": "https://www.zaistudio.net/#website"}, "description": "All games by Zai Studio: Dala and the Cursed Forest, the 7 Sexy Sins series, Tamalist, Buffet Fighting and our Thai mobile apps, with store links.", "about": {"@id": "https://www.zaistudio.net/#org"}, "mainEntity": {"@type": "ItemList", "name": "Games by Zai Studio", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@id": "https://www.zaistudio.net/game-dala.html#game", "name": "Dala and the Cursed Forest", "url": "https://www.zaistudio.net/game-dala.html"}}, {"@type": "ListItem", "position": 2, "item": {"@id": "https://www.zaistudio.net/game-7sexy-sins.html#game", "name": "7 Sexy Sins", "url": "https://www.zaistudio.net/game-7sexy-sins.html"}}, {"@type": "ListItem", "position": 3, "item": {"@id": "https://www.zaistudio.net/game-shootshoot.html#game", "name": "Shoot Shoot My Waifu", "url": "https://www.zaistudio.net/game-shootshoot.html"}}, {"@type": "ListItem", "position": 4, "item": {"@id": "https://www.zaistudio.net/game-7sins-labyrinth.html#game", "name": "7 Sins : Lost in Labyrinth", "url": "https://www.zaistudio.net/game-7sins-labyrinth.html"}}, {"@type": "ListItem", "position": 5, "item": {"@id": "https://www.zaistudio.net/game-tamalist.html#game", "name": "Tamalist", "url": "https://www.zaistudio.net/game-tamalist.html"}}, {"@type": "ListItem", "position": 6, "item": {"@id": "https://www.zaistudio.net/game-buffet-fighting.html#game", "name": "Buffet Fighting", "url": "https://www.zaistudio.net/game-buffet-fighting.html"}}]}, "hasPart": [{"@id": "https://www.zaistudio.net/games.html#ghost"}, {"@id": "https://www.zaistudio.net/games.html#siimsi"}]}, {"@type": "MobileApplication", "@id": "https://www.zaistudio.net/games.html#ghost", "name": "ผีขูดหวย", "operatingSystem": "Android", "author": {"@id": "https://www.zaistudio.net/#org"}, "publisher": {"@id": "https://www.zaistudio.net/#org"}, "inLanguage": "th", "applicationCategory": "EntertainmentApplication", "sameAs": ["https://play.google.com/store/apps/details?id=com.zai_soft.ghostlotterry"]}, {"@type": "MobileApplication", "@id": "https://www.zaistudio.net/games.html#siimsi", "name": "เซียมซีเชื่อมจิต", "operatingSystem": "Android", "author": {"@id": "https://www.zaistudio.net/#org"}, "publisher": {"@id": "https://www.zaistudio.net/#org"}, "inLanguage": "th", "applicationCategory": "EntertainmentApplication", "sameAs": ["https://play.google.com/store/apps/details?id=net.zaistudio.seamsi"]}]}</script>
 </head>
 <body>
 <div class="bg-canvas"></div>
 <nav>
   <a href="index.html" class="logo">
-    <div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div>
+    <div class="logo-img"><img src="assets/logos/zai-studio-logo.png" alt="Zai Studio logo" onerror="this.parentElement.textContent='Z'"></div>
     <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About Us</a></li>
     <li><a href="games.html" class="active">Our Games</a></li>
-    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+    <li><a href="services.html">What We Do</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Contact</a></li>
   </ul>
 </nav>
 <main>
   <div class="page-hero">
-    <p class="section-tag">Portfolio</p>
+    <p class="section-tag">Catalog</p>
     <h1>Our Games</h1>
+    <p class="group-p" style="margin-top:0.75rem">Every released and announced game by <a href="about.html">Zai Studio</a> (ZAI STUDIO CO., LTD.), with links to the official store pages.</p>
   </div>
-  <section>
-        <div class="games-grid">
-
-      <a href="game-dala-th.html" class="game-card">
-        <img src="https://static.wixstatic.com/media/6839ea_12f296ef813045aa9d63e055b48754bf~mv2.png/v1/fill/w_475,h_268,fp_0.50_0.50,q_95,enc_avif,quality_auto/6839ea_12f296ef813045aa9d63e055b48754bf~mv2.webp" alt="Dala Thai Press Kit" class="game-card-img">
-        <div class="game-card-body">
-          <p class="game-card-date">August 2024</p>
-          <h3>Dala and the Cursed Forest [Thai Press Kit]</h3>
-          <p>หลอมรวมการ์ด... ปลดปล่อยจิตวิญญาณ... เขียนโชคชะตาของคุณใหม่... เกมแนว Dark Fantasy Roguelike Deckbuilder</p>
-        </div>
-      </a>
-
-      <a href="game-dala.html" class="game-card">
-        <img src="https://static.wixstatic.com/media/6839ea_12f296ef813045aa9d63e055b48754bf~mv2.png/v1/fill/w_475,h_268,fp_0.50_0.50,q_95,enc_avif,quality_auto/6839ea_12f296ef813045aa9d63e055b48754bf~mv2.webp" alt="Dala and the Cursed Forest" class="game-card-img">
-        <div class="game-card-body">
-          <p class="game-card-date">April 2024</p>
-          <h3>Dala and the Cursed Forest</h3>
-          <p>Forge the cards... Unleash the spirit... Rewrite your fate. A dark fantasy roguelike deckbuilder.</p>
-        </div>
-      </a>
-
-      <a href="game-7sins-labyrinth.html" class="game-card">
-        <img src="https://static.wixstatic.com/media/6839ea_5546bf50c757414592f14b624a26e52c~mv2.png/v1/fill/w_475,h_268,fp_0.50_0.50,q_95,enc_avif,quality_auto/6839ea_5546bf50c757414592f14b624a26e52c~mv2.webp" alt="7 Sins Lost in Labyrinth" class="game-card-img">
-        <div class="game-card-body">
-          <p class="game-card-date">January 2023</p>
-          <h3>7 Sins: Lost in Labyrinth</h3>
-          <p>A Survival Horror Game based on the world of 7 Sexy Sins. Survive and escape the hellish mazes!</p>
-        </div>
-      </a>
-
-      <a href="game-shootshoot.html" class="game-card">
-        <img src="https://static.wixstatic.com/media/6839ea_7ec56d794e3642469f08861bee6a67b4~mv2.jpg/v1/fill/w_475,h_268,fp_0.50_0.50,q_90,enc_avif,quality_auto/6839ea_7ec56d794e3642469f08861bee6a67b4~mv2.webp" alt="Shoot Shoot My Waifu" class="game-card-img">
-        <div class="game-card-body">
-          <p class="game-card-date">October 2021</p>
-          <h3>Shoot Shoot My Waifu (7 Sexy Sins EP2)</h3>
-          <p>Your mission is to search for those 7 sins demons disguised as Waifus in the human world.</p>
-        </div>
-      </a>
-
-      <a href="game-7sexy-tadaima.html" class="game-card">
-        <img src="https://static.wixstatic.com/media/6839ea_d05a44098eda4fd3b6d01eff94921e36~mv2.png/v1/fill/w_475,h_227,fp_0.50_0.50,q_95,enc_avif,quality_auto/6839ea_d05a44098eda4fd3b6d01eff94921e36~mv2.webp" alt="7 Sexy Sins Tadaima" class="game-card-img">
-        <div class="game-card-body">
-          <p class="game-card-date">October 2021</p>
-          <h3>7 Sexy Sins: Tadaima</h3>
-          <p>The original version with the original character designs. Available on DLsite and Nutaku.</p>
-        </div>
-      </a>
-
-      <a href="game-7sexy-mobile.html" class="game-card">
-        <img src="https://static.wixstatic.com/media/6839ea_bc57b24ef0a64ebf8d90b1af66e73ecc~mv2.png/v1/fill/w_475,h_268,fp_0.50_0.50,q_95,enc_avif,quality_auto/6839ea_bc57b24ef0a64ebf8d90b1af66e73ecc~mv2.webp" alt="7 Sexy Sins Mobile" class="game-card-img">
-        <div class="game-card-body">
-          <p class="game-card-date">October 2021</p>
-          <h3>7 Sexy Sins — Mobile Version</h3>
-          <p>Play 2 episodes of 7 Sexy Sins on mobile via Google Play Store.</p>
-        </div>
-      </a>
-
-      <a href="game-buffet-fighting.html" class="game-card">
-        <img src="https://static.wixstatic.com/media/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.png/v1/fill/w_475,h_268,fp_0.50_0.50,q_95,enc_avif,quality_auto/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.webp" alt="Buffet Fighting" class="game-card-img">
-        <div class="game-card-body">
-          <p class="game-card-date">October 2021</p>
-          <h3>Buffet Fighting</h3>
-          <p>เกมหมูกระทะออนไลน์ WebGL สร้างในงาน Gamejam 48 ชั่วโมง เล่นได้สูงสุด 4 คน!</p>
-        </div>
-      </a>
-
-            <a href="game-tamalist.html" class="game-card">
-        <img src="https://static.wixstatic.com/media/6839ea_6c6e3157f3c44eb48fa937b4fd158b3c~mv2.png/v1/fill/w_475,h_268,fp_0.50_0.50,q_95,enc_avif,quality_auto/6839ea_6c6e3157f3c44eb48fa937b4fd158b3c~mv2.webp" alt="Tamalist" class="game-card-img">
-        <div class="game-card-body">
-          <p class="game-card-date">October 2021</p>
-          <h3>Tamalist: Pet Game That Changes Your Habits</h3>
-          <p>Welcome to gamification to change your habits with more enjoyment.</p>
-        </div>
-      </a>
-
+  <section style="padding-top:0">
+    <h2 class="group-h">Dala and the Cursed Forest</h2>
+    <p class="group-p">A dark fantasy roguelike deckbuilder inspired by Thai mythology. The demo and soundtrack are part of the same game.</p>
+    <div class="games-grid">
+      <article class="game-card">
+        <a href="game-dala.html">
+          <img loading="lazy" src="assets/dala/dala-key-art.jpg" alt="Dala and the Cursed Forest key art" class="game-card-img">
+          <div class="game-card-body">
+            <p class="game-card-date">PC · Steam Early Access · 2026</p>
+            <h3>Dala and the Cursed Forest</h3>
+            <p>Fuse cards, transform mid-battle and command plant allies in a roguelike deckbuilder inspired by Thai mythology.</p>
+          </div>
+        </a>
+        <div class="card-extras"><a href="https://store.steampowered.com/app/2748770/" target="_blank" rel="noopener">Steam</a><a href="game-dala-th.html">ภาษาไทย (Thai press kit)</a><a href="https://store.steampowered.com/app/2748770/" target="_blank" rel="noopener">Free demo</a><a href="https://store.steampowered.com/app/4948390/" target="_blank" rel="noopener">Soundtrack</a></div>
+      </article>
     </div>
+
+    <h2 class="group-h">7 Sexy Sins series</h2>
+    <p class="group-p">Our best-known series follows the angel Raphael and the demons of the seven sins. <strong style="color:#fff">150K+ players across Steam and Google Play</strong>, and Very Positive reviews on Steam. <a href="game-7sexy-sins.html">Series overview →</a></p>
+    <div class="games-grid">
+      <article class="game-card">
+        <a href="game-7sexy-sins.html">
+          <img loading="lazy" src="assets/images/cover-7sexy-mobile.jpg" alt="7 Sexy Sins" class="game-card-img">
+          <div class="game-card-body">
+            <p class="game-card-date">PC · Steam · 2019</p>
+            <h3>7 Sexy Sins</h3>
+            <p>Hunt the Demons of the Seven Sins, break their armor and purify them with holy light.</p>
+          </div>
+        </a>
+        <div class="card-extras"><a href="https://store.steampowered.com/app/1023740/" target="_blank" rel="noopener">Steam</a></div>
+      </article>
+      <article class="game-card">
+        <a href="game-shootshoot.html">
+          <img loading="lazy" src="assets/images/6839ea_7ec56d794e3642469f08861bee6a67b4_mv2.jpg" alt="Shoot Shoot My Waifu" class="game-card-img">
+          <div class="game-card-body">
+            <p class="game-card-date">7 Sexy Sins EP2 · PC · Steam · 2020</p>
+            <h3>Shoot Shoot My Waifu</h3>
+            <p>Search for the seven sins demons disguised as waifus in the human world.</p>
+          </div>
+        </a>
+        <div class="card-extras"><a href="https://store.steampowered.com/app/1405660/" target="_blank" rel="noopener">Steam</a></div>
+      </article>
+      <article class="game-card">
+        <a href="game-7sins-labyrinth.html">
+          <img loading="lazy" src="assets/images/cover-7sins-labyrinth.jpg" alt="7 Sins : Lost in Labyrinth" class="game-card-img">
+          <div class="game-card-body">
+            <p class="game-card-date">Survival horror · PC · Steam · 2023</p>
+            <h3>7 Sins : Lost in Labyrinth</h3>
+            <p>A survival horror game set in the world of 7 Sexy Sins. Survive and escape the hellish mazes.</p>
+          </div>
+        </a>
+        <div class="card-extras"><a href="https://store.steampowered.com/app/2221820/" target="_blank" rel="noopener">Steam</a></div>
+      </article>
+    </div>
+    <p class="group-p" style="margin-top:1.75rem"><strong style="color:#fff">Other versions in the series</strong> (not separate games)</p>
+    <ul class="version-list">
+      <li><img loading="lazy" src="assets/images/cover-7sexy-tadaima.jpg" alt="7 Sexy Sins: Tadaima"><div><a href="game-7sexy-tadaima.html">7 Sexy Sins: Tadaima</a><p>Original character-design version of Shoot Shoot My Waifu, on DLsite and Nutaku.</p></div></li>
+      <li><img loading="lazy" src="assets/images/cover-7sexy-mobile.jpg" alt="7 Sexy Sins Mobile"><div><a href="game-7sexy-mobile.html">7 Sexy Sins Mobile</a><p>Android version with two episodes · <strong style="color:#fff">100K+ players</strong> on <a href="https://play.google.com/store/apps/details?id=com.zai_soft.sevensexysins" target="_blank" rel="noopener" style="color:var(--accent2);font-family:inherit;font-weight:400;font-size:inherit">Google Play</a></p></div></li>
+    </ul>
+
+    <h2 class="group-h">Other games</h2>
+    <div class="games-grid">
+      <article class="game-card">
+        <a href="game-tamalist.html">
+          <img loading="lazy" src="assets/images/cover-tamalist.jpg" alt="Tamalist" class="game-card-img">
+          <div class="game-card-body">
+            <p class="game-card-date">Habit pet game · Android · Google Play</p>
+            <h3>Tamalist</h3>
+            <p>Check off your habits and feed your pet. A pet game that helps you build better habits.</p>
+          </div>
+        </a>
+        <div class="card-extras"><a href="https://play.google.com/store/apps/details?id=net.zaistudio.todolist" target="_blank" rel="noopener">Google Play</a></div>
+      </article>
+      <article class="game-card">
+        <a href="game-buffet-fighting.html">
+          <img loading="lazy" src="assets/images/cover-buffet-fighting.jpg" alt="Buffet Fighting" class="game-card-img">
+          <div class="game-card-body">
+            <p class="game-card-date">Game jam · Web · 2021</p>
+            <h3>Buffet Fighting</h3>
+            <p>An online multiplayer Thai BBQ game made in a 48-hour game jam, for up to 4 players.</p>
+          </div>
+        </a>
+        <div class="card-extras"><span class="lbl">On itch.io as</span><a href="https://freetale.itch.io/buffetfighter" target="_blank" rel="noopener">Buffet Fighter</a><span class="lbl">· shared team credit</span></div>
+      </article>
+    </div>
+    <h2 class="group-h" id="apps">Mobile apps</h2>
+    <p class="group-p">Thai-language entertainment apps by Zai Studio on Google Play.</p>
+    <ul class="version-list">
+      <li><a href="https://play.google.com/store/apps/details?id=com.zai_soft.ghostlotterry" target="_blank" rel="noopener" class="app-ico" aria-label="ผีขูดหวย on Google Play"><img src="assets/images/icon-ghost-lottery.jpg" alt="ผีขูดหวย app icon" loading="lazy"></a><div><a href="https://play.google.com/store/apps/details?id=com.zai_soft.ghostlotterry" target="_blank" rel="noopener">ผีขูดหวย</a><p>Pick a haunted tree, light incense and sprinkle powder to scratch out your lucky numbers. Every tree has its own legend. · <a href="https://play.google.com/store/apps/details?id=com.zai_soft.ghostlotterry" target="_blank" rel="noopener" style="color:var(--accent2);font-family:inherit;font-weight:400;font-size:inherit">Google Play</a> · <a href="privacy-policy-ghost.html" style="color:var(--accent2);font-family:inherit;font-weight:400;font-size:inherit">Privacy</a></p></div></li>
+      <li><a href="https://play.google.com/store/apps/details?id=net.zaistudio.seamsi" target="_blank" rel="noopener" class="app-ico" aria-label="เซียมซีเชื่อมจิต on Google Play"><img src="assets/images/icon-siamsi.jpg" alt="เซียมซีเชื่อมจิต app icon" loading="lazy"></a><div><a href="https://play.google.com/store/apps/details?id=net.zaistudio.seamsi" target="_blank" rel="noopener">เซียมซีเชื่อมจิต</a><p>Draw fortune sticks from famous Thai temples: choose a temple, make a wish and shake your phone to read your fortune on love, work and money. · <a href="https://play.google.com/store/apps/details?id=net.zaistudio.seamsi" target="_blank" rel="noopener" style="color:var(--accent2);font-family:inherit;font-weight:400;font-size:inherit">Google Play</a> · <a href="privacy-policy-siimsi.html" style="color:var(--accent2);font-family:inherit;font-weight:400;font-size:inherit">Privacy</a></p></div></li>
+    </ul>
   </section>
 </main>
-<div class="cta-strip"><div class="cta-inner"><h2>Ready to Build Your Game?</h2><div class="cta-emails"><a href="mailto:contact.zaistudio@gmail.com">contact.zaistudio@gmail.com</a></div><a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">Get a Quote</a></div></div>
+<div class="cta-strip"><div class="cta-inner"><h2>Let&rsquo;s Talk Games</h2><div class="cta-emails"><a href="mailto:contact.zaistudio@gmail.com">contact.zaistudio@gmail.com</a></div><a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">Contact Us</a></div></div>
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div><div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div></a><p>Delivering Joy Through Games, Meeting Your Unique Needs.</p></div>
-    <div class="footer-col"><h4>Menu</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="games.html">Our Games</a></li></ul></div>
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-img"><img src="assets/logos/zai-studio-logo.png" alt="Zai Studio logo" onerror="this.parentElement.textContent='Z'"></div><div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div></a><p>Original games with distinctive art and gameplay, made in Thailand.</p></div>
+    <div class="footer-col"><h4>Menu</h4><ul><li><a href="index.html">Home</a></li><li><a href="games.html">Our Games</a></li><li><a href="services.html">What We Do</a></li><li><a href="about.html">About Us</a></li></ul></div>
     <div class="footer-col"><h4>Follow Us</h4><ul><li><a href="https://www.facebook.com/ZaiStudio" target="_blank">Facebook</a></li><li><a href="https://www.linkedin.com/company/67077298/" target="_blank">LinkedIn</a></li><li><a href="https://www.youtube.com/channel/UCz8Jmx_ahddrO3pYkh9ZxOA" target="_blank">YouTube</a></li><li><a href="https://www.tiktok.com/@zaistudio" target="_blank">TikTok</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><p>© 2021 by ZAI STUDIO CO., LTD.</p></div>
+  <div class="footer-bottom"><p>© 2026 ZAI STUDIO CO., LTD.</p></div>
 </footer>
 </body>
 </html>

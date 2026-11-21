@@ -1,0 +1,49 @@
+Dala and the Cursed Forest: Fact Sheet
+=======================================
+Developer & publisher: Zai Studio (ZAI STUDIO CO., LTD.), Thailand
+Game director: Ussarin Maneewuttiworasakul (Nonae)
+Genre: Roguelike deckbuilder inspired by Thai mythology
+Platform: PC (Windows), Steam
+Status: Early Access since June 26, 2026
+Languages (interface & subtitles): English, Japanese, Simplified Chinese, Thai
+Steam: https://store.steampowered.com/app/2748770/
+Trailer: https://www.youtube.com/watch?v=SczMCBE5jcY
+Press kit: https://www.zaistudio.net/game-dala.html
+Contact (press & creator keys): contact.zaistudio@gmail.com
+
+Usage
+All images, clips and the GIF in this kit are free to use in articles, reviews, videos,
+thumbnails and streams about the game. Record, stream and monetize gameplay footage with
+in-game audio freely.
+
+Short description
+Fuse cards in your hand. Transform in the middle of battle. Command plant allies and unleash
+powerful combos in a roguelike deckbuilder inspired by Thai mythology. The cards you combine
+generate Cells that unlock new forms, each with unique abilities and cards.
+
+Starting decks: Guwen (armor & fire), Tatara (plant allies), Vihok (chaining cards & poison),
+Vipak (water & Naga hatchlings). All four are playable in Early Access.
+
+Awards: 1st place, Strategy Game category, depa Game Accelerator Program (Batch 2)
+
+The story behind Dala (told by Ussarin Maneewuttiworasakul, "Nonae")
+Dala began years ago as my graduation thesis: a 2D side-scrolling action game in the spirit of
+Odin Sphere, where Dala already collected flower petals to transform. Transformation was the one
+thing that truly set it apart, so I rebuilt the game around it as a 2D side-view strategy game
+where fusing cards powers each transformation. Dala is made by a team of two. Artists who draw in
+this style are hard to find, so I designed and drew most of the game myself: the game design,
+the art direction, and most of the characters, scenes and animation.
+
+Quote
+"When making Dala, I wanted players to look at the cards in their hand and think, 'What would I
+get if I fused these two?' And then play that new card right away, in the same turn. For the
+art, I wanted the Himmapan forest to be so beautiful that you want to walk deeper into it, and for
+players to enjoy meeting its NPCs and monsters, each with a character all their own."
+Ussarin Maneewuttiworasakul (Nonae), Co-founder & Game Director, Zai Studio
+
+How we use AI
+Dala's characters, worlds and designs start with me: every idea, sketch and design decision is
+human. Finding artists who could work in Dala's style was one of the hardest parts of the project,
+so I use AI as a tool to help with coding and rendering, so a very small team can finish a game of
+this scale. I don't believe in AI art without human creativity behind it, and every asset in Dala
+is directed, drawn over and finished by hand.

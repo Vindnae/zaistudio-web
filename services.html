@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Zai Studio</title>
-  <meta name="description" content="Game development services by Zai Studio — full game development, art direction, consulting, and management services for your game project.">
-  <meta name="keywords" content="game development services, game consulting, Unity, art direction, game studio Thailand">
+<title>What We Do | Zai Studio</title>
+  <link rel="canonical" href="https://www.zaistudio.net/services.html">
+  <meta name="description" content="Zai Studio makes original games and helps game teams with project scoping, production planning and pipelines, plus selected game art and Steam marketing assets.">
+  <meta name="keywords" content="Zai Studio, original games, game production consulting, game pipeline, game art, Steam page art, game marketing assets, Thailand">
   <meta name="author" content="Zai Studio">
-  <meta property="og:title" content="Services | Zai Studio">
-  <meta property="og:description" content="Game development services by Zai Studio — full game development, art direction, consulting, and management services for your game project.">
+  <meta property="og:title" content="What We Do | Zai Studio">
+  <meta property="og:description" content="Zai Studio makes original games and helps game teams with project scoping, production planning and pipelines, plus selected game art and Steam marketing assets.">
   <meta property="og:image" content="https://www.zaistudio.net/assets/images/6839ea_12f296ef813045aa9d63e055b48754bf_mv2.png">
   <meta property="og:url" content="https://www.zaistudio.net/services.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Services | Zai Studio">
-  <meta name="twitter:description" content="Game development services by Zai Studio — full game development, art direction, consulting, and management services for your game project.">
+  <meta name="twitter:title" content="What We Do | Zai Studio">
+  <meta name="twitter:description" content="Zai Studio makes original games and helps game teams with project scoping, production planning and pipelines, plus selected game art and Steam marketing assets.">
   <meta name="twitter:image" content="https://www.zaistudio.net/assets/images/6839ea_12f296ef813045aa9d63e055b48754bf_mv2.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -39,7 +40,7 @@ nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);background:rgba(7,9,
 main{padding-top:var(--nav-h);position:relative;z-index:1}
 .page-hero{padding:clamp(3rem,7vw,5.5rem) clamp(1.5rem,5vw,4rem) 2rem;max-width:1280px;margin:0 auto}
 .section-tag{font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:0.3em;color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem}
-.section-tag::before{content:'— '}
+.section-tag::before{content:'';display:inline-block;width:18px;height:2px;background:var(--accent);vertical-align:middle;margin-right:8px}
 .page-hero h1{font-family:'Rajdhani',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;color:#fff;margin-top:0.5rem}
 section{padding:0 clamp(1.5rem,5vw,4rem) clamp(3rem,7vw,5.5rem);max-width:1280px;margin:0 auto}
 .services-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
@@ -68,49 +69,128 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem cla
 .footer-bottom{max-width:1280px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-bottom p{color:var(--muted);font-size:0.8rem}
 @media(max-width:640px){.svc{grid-template-columns:1fr}.svc-num{font-size:1.5rem}.footer-inner{grid-template-columns:1fr;gap:2rem}}
+.wwd-intro{color:var(--muted);max-width:720px;margin-top:1rem;font-size:1rem;line-height:1.8}
+.wwd-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem;margin-top:2rem}
+.wwd-stats div{border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.2rem;background:rgba(79,123,255,0.05)}
+.wwd-stats b{display:block;font-family:'Rajdhani',sans-serif;font-size:1.8rem;color:#fff;line-height:1.1}
+.wwd-stats span{color:var(--muted);font-size:0.8rem;line-height:1.5}
+.svc p+p{margin-top:0.7rem}
+.wwd-list{list-style:none;margin:0.9rem 0;display:flex;flex-direction:column;gap:0.5rem}
+.wwd-list li{color:var(--muted);font-size:0.9rem;padding-left:1.1rem;position:relative}
+.wwd-list li::before{content:'';position:absolute;left:0;top:0.65em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.wwd-list strong{color:#fff;font-weight:500}
+.wwd-work{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.wwd-work a{text-decoration:none;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.02)}
+.wwd-work img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.wwd-work span{display:block;padding:0.7rem 0.9rem;color:var(--muted);font-size:0.82rem}
+.wwd-cta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:2rem;border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;background:rgba(79,123,255,0.06)}
+.wwd-cta h3{font-family:'Rajdhani',sans-serif;font-size:1.3rem;color:#fff}
+.wwd-cta p{color:var(--muted);font-size:0.9rem}
+.wwd-flow{display:flex;flex-wrap:wrap;gap:0.4rem;margin:1rem 0}
+.wwd-flow span{font-size:0.78rem;color:#fff;background:rgba(79,123,255,0.14);border:1px solid var(--border);border-radius:999px;padding:0.3rem 0.8rem;position:relative}
+.wwd-flow span:not(:last-child)::after{content:'›';position:absolute;right:-0.42rem;top:50%;transform:translateY(-52%);color:var(--accent);font-size:0.9rem}
+.wwd-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.wwd-cols h4{font-family:'Rajdhani',sans-serif;color:var(--accent);font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;margin-top:0.5rem}
+.wwd-book{display:flex;gap:1rem;align-items:center;border:1px solid var(--border);border-radius:10px;padding:0.7rem;margin-top:1rem;text-decoration:none;background:rgba(255,255,255,0.02);max-width:620px}
+.wwd-book img{width:96px;height:96px;object-fit:cover;border-radius:6px;flex-shrink:0}
+.wwd-book span{color:var(--muted);font-size:0.85rem;line-height:1.6}
+.wwd-book strong{display:block;color:#fff;font-size:1rem}
+.wwd-styles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0.8rem;margin:0.8rem 0 1rem}
+.wwd-styles a{text-decoration:none;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.02)}
+.wwd-styles img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.wwd-styles span{display:block;padding:0.55rem 0.75rem;color:var(--muted);font-size:0.78rem;line-height:1.5}
+.wwd-styles b{display:block;color:#fff;font-size:0.88rem;font-weight:600}
+.wwd-note{font-size:0.85rem!important;font-style:italic}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://www.zaistudio.net/#website", "url": "https://www.zaistudio.net/", "name": "Zai Studio", "publisher": {"@id": "https://www.zaistudio.net/#org"}}, {"@type": "Organization", "@id": "https://www.zaistudio.net/#org", "name": "Zai Studio", "legalName": "ZAI STUDIO CO., LTD.", "url": "https://www.zaistudio.net/"}, {"@type": "WebPage", "@id": "https://www.zaistudio.net/services.html", "url": "https://www.zaistudio.net/services.html", "name": "What We Do | Zai Studio", "inLanguage": "en", "isPartOf": {"@id": "https://www.zaistudio.net/#website"}, "description": "Zai Studio makes original games and helps game teams with project scoping, production planning and pipelines, plus selected game art and Steam marketing assets.", "publisher": {"@id": "https://www.zaistudio.net/#org"}}]}</script>
 </head>
 <body>
 <div class="bg-canvas"></div>
 <nav>
   <a href="index.html" class="logo">
-    <div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div>
+    <div class="logo-img"><img src="assets/logos/zai-studio-logo.png" alt="Zai Studio logo" onerror="this.parentElement.textContent='Z'"></div>
     <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="services.html" class="active">Services</a></li>
-    <li><a href="about.html">About Us</a></li>
     <li><a href="games.html">Our Games</a></li>
-    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+    <li><a href="services.html" class="active">What We Do</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Contact</a></li>
   </ul>
 </nav>
 <main>
   <div class="page-hero">
-    <p class="section-tag">What We Do</p>
-    <h1>What We Can Do for You</h1>
+    <p class="section-tag">Zai Studio</p>
+    <h1>What We Do</h1>
+    <p class="wwd-intro">An independent studio from Thailand, led by a game director with about 20 years in game, animation and publishing studios. We make our own games, and we bring what we learned shipping them to other game teams.</p>
+    <div class="wwd-stats">
+      <div><b>150K+</b><span>players across<br>Steam and Google Play</span></div>
+      <div><b>1st place</b><span>depa Game Accelerator<br>(Strategy)</span></div>
+      <div><b>20 years</b><span>in game, animation<br>and publishing</span></div>
+    </div>
   </div>
-  <section>
+  <section style="padding-top:1rem">
     <div class="services-list">
-      <div class="svc"><div class="svc-num">01</div><div><h3>Our Games</h3><p>We create games to serve the experience for players and we have goals to develop the game to be higher quality and create more fun games. 7 Sexy Sins is a game that we are proud of.</p></div></div>
-      <div class="svc"><div class="svc-num">02</div><div><h3>Business Game Project</h3><p>We provide full game development and game art services for customers who want to have their own games and need a team that can work effectively.</p></div></div>
-      <div class="svc"><div class="svc-num">03</div><div><h3>Design &amp; Development Services</h3><p>If you want to increase any part of the game, we can help you fulfill it by development and art. Our expertise includes Unity and Art Direction, Character Design, 2D and 3D.</p></div></div>
-      <div class="svc"><div class="svc-num">04</div><div><h3>Consulting Services</h3><p>If you want a Consultant or Coaching to advise your team to make a good game, create a digital product on a limited timeline from an efficient budget, or how to make beautiful art assets in a professional system — we're here for you.</p></div></div>
+      <div class="svc" id="games"><div class="svc-num">01</div><div>
+        <h3>Original Games</h3>
+        <p>We create our own games with distinctive art and gameplay. Our current project is <a href="game-dala.html" style="color:var(--accent2)">Dala and the Cursed Forest</a>, in Early Access on Steam, and our best-known series is <a href="game-7sexy-sins.html" style="color:var(--accent2)">7 Sexy Sins</a>.</p>
+        <p>Every game follows three rules: there is a cat, it is fun with a unique selling point, and the art is beautiful. <a href="games.html" style="color:var(--accent2)">See all our games</a></p>
+      </div></div>
+      <div class="svc" id="consulting"><div class="svc-num">02</div><div>
+        <h3>Game Project &amp; Pipeline Consulting</h3>
+        <p>We help game teams scope their projects, plan production, and set up workflows that fit their team. Our advice comes from doing the work, not only planning it: <a href="about.html#ussarin" style="color:var(--accent2)">Nonae</a> has taken projects through every stage herself, from theory to hands-on practice.</p>
+        <div class="wwd-flow"><span>Idea</span><span>Pre-production</span><span>Production</span><span>Testing</span><span>Launch</span><span>Marketing</span><span>Live updates</span></div>
+        <div class="wwd-cols">
+          <div><h4>How we help</h4><ul class="wwd-list">
+            <li><strong>Choosing the idea:</strong> find the concept with real potential, and scope it so your team can finish it.</li>
+            <li><strong>Planning:</strong> people, time and budget, with clear milestones and priorities.</li>
+            <li><strong>Systems and workflows:</strong> ways of working that keep the team efficient, using AI where it genuinely helps while human creativity stays at the core.</li>
+          </ul></div>
+          <div><h4>Who it is for</h4><ul class="wwd-list">
+            <li>Teams who want to make a game but are unsure of the direction or the right process.</li>
+            <li>Teams already in development who need to decide what to add, what to cut, and how to reach the finish line.</li>
+            <li>Projects with a set budget and timeline that need a clear way of working.</li>
+          </ul></div>
+        </div>
+        <a class="wwd-book" href="about.html#book"><img src="assets/images/making-of-indie-game-book.jpg" alt="Making of Indie Game book by Ussarin" loading="lazy"><span><strong>Making of Indie Game</strong>Nonae&rsquo;s book on the side of game development few people talk about: teams, funding, risk and expensive lessons.</span></a>
+      </div></div>
+      <div class="svc" id="art"><div class="svc-num">03</div><div>
+        <h3>Game Art &amp; Marketing Assets</h3>
+        <p>We take on selected projects, from in-game art to visuals for Steam pages and game launches. Art is our strongest skill: solid theory, hands-on experience and fast delivery.</p>
+        <ul class="wwd-list">
+          <li><strong>Marketing assets:</strong> key art, banners and visuals for media, campaigns and Steam pages.</li>
+          <li><strong>Character design:</strong> new characters and mascots that people remember.</li>
+          <li><strong>Art direction:</strong> support from pre-production, to find the right style for your game.</li>
+        </ul>
+        <p>Our own games span very different styles, so we can adapt to yours:</p>
+        <div class="wwd-styles">
+          <a href="game-dala.html"><img src="assets/dala/dala-key-art.jpg" alt="Dala and the Cursed Forest art style" loading="lazy"><span><b>Asian painterly</b>Dala and the Cursed Forest</span></a>
+          <a href="game-7sexy-sins.html"><img src="assets/images/cover-7sexy-mobile.jpg" alt="7 Sexy Sins art style" loading="lazy"><span><b>Anime, 2D and 3D</b>7 Sexy Sins series</span></a>
+          <a href="game-tamalist.html"><img src="assets/images/cover-tamalist.jpg" alt="Tamalist art style" loading="lazy"><span><b>Cute mascots</b>Tamalist, with pets ready for merchandise</span></a>
+          <a href="games.html#apps"><img src="assets/images/icon-ghost-lottery.jpg" alt="ผีขูดหวย art style" loading="lazy"><span><b>2D realistic</b>ผีขูดหวย</span></a>
+        </div>
+        <p class="wwd-note">As an independent studio, we take on a limited number of projects at a time so that Nonae can oversee every one personally.</p>
+      </div></div>
+    </div>
+    <div class="wwd-cta">
+      <div><h3>Have a project in mind?</h3><p>Email us with your game, team size and timeline.</p></div>
+      <a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">contact.zaistudio@gmail.com</a>
     </div>
     <div class="quote-block">
       <blockquote>We all want to create the game of our dreams, don't we? But there are many complex elements in game creation. Good planning and putting the right person in the right job will help make the dreams come true.</blockquote>
-      <cite>— Ussarin, Zai Studio</cite>
+      <cite><a href="about.html#ussarin" style="color:inherit">Ussarin Maneewuttiworasakul (Nonae)</a>, Co-founder &amp; Game Director, Zai Studio</cite>
     </div>
   </section>
 </main>
-<div class="cta-strip"><div class="cta-inner"><h2>Ready to Build Your Game?</h2><div class="cta-emails"><a href="mailto:contact.zaistudio@gmail.com">contact.zaistudio@gmail.com</a></div><a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">Get a Quote</a></div></div>
+<div class="cta-strip"><div class="cta-inner"><h2>Let&rsquo;s Talk Games</h2><div class="cta-emails"><a href="mailto:contact.zaistudio@gmail.com">contact.zaistudio@gmail.com</a></div><a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">Contact Us</a></div></div>
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div><div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div></a><p>Delivering Joy Through Games, Meeting Your Unique Needs.</p></div>
-    <div class="footer-col"><h4>Menu</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="games.html">Our Games</a></li></ul></div>
+    <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-img"><img src="assets/logos/zai-studio-logo.png" alt="Zai Studio logo" onerror="this.parentElement.textContent='Z'"></div><div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div></a><p>Original games with distinctive art and gameplay, made in Thailand.</p></div>
+    <div class="footer-col"><h4>Menu</h4><ul><li><a href="index.html">Home</a></li><li><a href="games.html">Our Games</a></li><li><a href="services.html">What We Do</a></li><li><a href="about.html">About Us</a></li></ul></div>
     <div class="footer-col"><h4>Follow Us</h4><ul><li><a href="https://www.facebook.com/ZaiStudio" target="_blank">Facebook</a></li><li><a href="https://www.linkedin.com/company/67077298/" target="_blank">LinkedIn</a></li><li><a href="https://www.youtube.com/channel/UCz8Jmx_ahddrO3pYkh9ZxOA" target="_blank">YouTube</a></li><li><a href="https://www.tiktok.com/@zaistudio" target="_blank">TikTok</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><p>© 2021 by ZAI STUDIO CO., LTD.</p></div>
+  <div class="footer-bottom"><p>© 2026 ZAI STUDIO CO., LTD.</p></div>
 </footer>
 </body>
 </html>

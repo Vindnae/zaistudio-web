@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Buffet Fighting | Zai Studio</title>
-  <meta name="description" content="Buffet Fighting — online BBQ multiplayer WebGL game. Play directly in your browser! Created in 48 hours at a Gamejam.">
+  <link rel="canonical" href="https://www.zaistudio.net/game-buffet-fighting.html">
+  <meta name="description" content="Buffet Fighting: online BBQ multiplayer WebGL game. Play directly in your browser! Created in 48 hours at a Gamejam.">
   <meta name="keywords" content="Buffet Fighting, WebGL game, multiplayer, browser game, Zai Studio, Gamejam">
   <meta name="author" content="Zai Studio">
   <meta property="og:title" content="Buffet Fighting | Zai Studio">
-  <meta property="og:description" content="Buffet Fighting — online BBQ multiplayer WebGL game. Play directly in your browser! Created in 48 hours at a Gamejam.">
-  <meta property="og:image" content="https://www.zaistudio.net/assets/images/6839ea_5b1593d8addd431aa9e4560f060bd084_mv2.png">
+  <meta property="og:description" content="Buffet Fighting: online BBQ multiplayer WebGL game. Play directly in your browser! Created in 48 hours at a Gamejam.">
+  <meta property="og:image" content="https://www.zaistudio.net/assets/images/cover-buffet-fighting.jpg">
   <meta property="og:url" content="https://www.zaistudio.net/game-buffet-fighting.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Buffet Fighting | Zai Studio">
-  <meta name="twitter:description" content="Buffet Fighting — online BBQ multiplayer WebGL game. Play directly in your browser! Created in 48 hours at a Gamejam.">
-  <meta name="twitter:image" content="https://www.zaistudio.net/assets/images/6839ea_5b1593d8addd431aa9e4560f060bd084_mv2.png">
+  <meta name="twitter:description" content="Buffet Fighting: online BBQ multiplayer WebGL game. Play directly in your browser! Created in 48 hours at a Gamejam.">
+  <meta name="twitter:image" content="https://www.zaistudio.net/assets/images/cover-buffet-fighting.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -122,6 +123,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem cla
 .step-num{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1rem;color:var(--accent);flex-shrink:0;width:1.4rem}
 .step-list li strong{color:#fff}
 </style>
+<style>
+.catalog-box{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:0 clamp(1.5rem,5vw,2rem) 4rem}
+.catalog-box .cb-inner{border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;background:rgba(79,123,255,0.04)}
+.catalog-box h2{font-family:'Rajdhani',sans-serif;font-size:1.2rem;color:#fff;margin:0 0 1rem;letter-spacing:0.03em}
+.catalog-box dl{display:grid;grid-template-columns:max-content 1fr;gap:0.45rem 1.5rem;font-size:0.9rem;margin:0}
+.catalog-box dt{color:var(--accent);font-family:'Rajdhani',sans-serif;font-weight:600}
+.catalog-box dd{color:var(--text);margin:0}
+.catalog-box a{color:var(--accent2);text-decoration:none}
+.catalog-box a:hover{text-decoration:underline}
+.catalog-box .more{margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.85rem;color:var(--muted);line-height:1.9}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://www.zaistudio.net/#website", "url": "https://www.zaistudio.net/", "name": "Zai Studio", "publisher": {"@id": "https://www.zaistudio.net/#org"}}, {"@type": "Organization", "@id": "https://www.zaistudio.net/#org", "name": "Zai Studio", "legalName": "ZAI STUDIO CO., LTD.", "url": "https://www.zaistudio.net/"}, {"@type": "WebPage", "@id": "https://www.zaistudio.net/game-buffet-fighting.html", "url": "https://www.zaistudio.net/game-buffet-fighting.html", "name": "Buffet Fighting | Zai Studio", "inLanguage": "th", "isPartOf": {"@id": "https://www.zaistudio.net/#website"}, "description": "Buffet Fighting: online BBQ multiplayer WebGL game. Play directly in your browser! Created in 48 hours at a Gamejam.", "about": {"@id": "https://www.zaistudio.net/game-buffet-fighting.html#game"}}, {"@type": "VideoGame", "@id": "https://www.zaistudio.net/game-buffet-fighting.html#game", "name": "Buffet Fighting", "url": "https://www.zaistudio.net/game-buffet-fighting.html", "author": {"@id": "https://www.zaistudio.net/#org"}, "publisher": {"@id": "https://www.zaistudio.net/#org"}, "alternateName": "Buffet Fighter", "genre": "Multiplayer party game", "gamePlatform": "Web browser", "description": "Game jam project, published on itch.io as Buffet Fighter with shared team credit.", "sameAs": ["https://freetale.itch.io/buffetfighter"], "image": "https://www.zaistudio.net/assets/images/cover-buffet-fighting.jpg"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zaistudio.net/"}, {"@type": "ListItem", "position": 2, "name": "Our Games", "item": "https://www.zaistudio.net/games.html"}, {"@type": "ListItem", "position": 3, "name": "Buffet Fighting", "item": "https://www.zaistudio.net/game-buffet-fighting.html"}]}]}</script>
 </head>
 <body>
 <div class="bg-canvas"></div>
@@ -133,15 +146,15 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem cla
 
 <nav>
   <a href="index.html" class="logo">
-    <div class="logo-img"><img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'"></div>
+    <div class="logo-img"><img src="assets/logos/zai-studio-logo.png" alt="Zai Studio logo" onerror="this.parentElement.textContent='Z'"></div>
     <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About Us</a></li>
     <li><a href="games.html" class="active">Our Games</a></li>
-    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+    <li><a href="services.html">What We Do</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Contact</a></li>
   </ul>
 </nav>
 
@@ -150,13 +163,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem cla
   <a href="games.html" class="back-link">← Back to Our Games</a>
   <p class="post-meta">Oct 14, 2021 &nbsp;·&nbsp; Updated: Oct 25, 2021</p>
   <h1>Buffet Fighting</h1>
+  <p style="color:var(--muted);margin:-0.5rem 0 1rem">Game jam project · Web (WebGL) · Published on itch.io as <a href="https://freetale.itch.io/buffetfighter" target="_blank" rel="noopener" style="color:var(--accent2)">Buffet Fighter</a>, with shared team credit</p>
 
   <div class="post-body">
 
     <p>กด <strong>Ctrl +</strong> เพื่อขยายหน้าจอตอนเล่น &nbsp;[รองรับ WebGL 2.0]</p>
 
     <!-- LIVE GAME EMBED -->
-    <p class="game-embed-label">เล่นได้เลย — Live WebGL Game</p>
+    <p class="game-embed-label">เล่นได้เลย: Live WebGL Game</p>
     <div class="game-embed-wrap">
       <iframe
         src="https://itch.io/embed-upload/2487666?color=333333"
@@ -175,11 +189,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem cla
     <!-- Score & Controls -->
     <p style="margin-top:1rem"><em>ตารางคะแนน</em></p>
     <div style="display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;margin:0.75rem 0 1.5rem">
-      <a href="https://static.wixstatic.com/media/6839ea_161386b376454fb1a2a5de5e82753a1d~mv2.png/v1/fill/w_478,h_471,al_c,q_85,enc_avif,quality_auto/6839ea_161386b376454fb1a2a5de5e82753a1d~mv2.png" class="photo-item" style="border-radius:6px;overflow:hidden;display:block;max-width:280px">
-        <img src="https://static.wixstatic.com/media/6839ea_161386b376454fb1a2a5de5e82753a1d~mv2.png/v1/fill/w_478,h_471,al_c,q_85,enc_avif,quality_auto/6839ea_161386b376454fb1a2a5de5e82753a1d~mv2.png" alt="Scoreboard" style="width:100%;display:block">
+      <a href="assets/images/buffet-scoreboard.png" class="photo-item" style="border-radius:6px;overflow:hidden;display:block;max-width:280px">
+        <img loading="lazy" src="assets/images/buffet-scoreboard.png" alt="Scoreboard" style="width:100%;display:block">
       </a>
-      <a href="https://static.wixstatic.com/media/6839ea_755aac3ab5a24849ba7edf45c74c69b7~mv2.png/v1/fill/w_360,h_171,al_c,q_85,enc_avif,quality_auto/6839ea_755aac3ab5a24849ba7edf45c74c69b7~mv2.png" class="photo-item" style="border-radius:6px;overflow:hidden;display:block;max-width:280px">
-        <img src="https://static.wixstatic.com/media/6839ea_755aac3ab5a24849ba7edf45c74c69b7~mv2.png/v1/fill/w_360,h_171,al_c,q_85,enc_avif,quality_auto/6839ea_755aac3ab5a24849ba7edf45c74c69b7~mv2.png" alt="Controls" style="width:100%;display:block">
+      <a href="assets/images/buffet-controls.png" class="photo-item" style="border-radius:6px;overflow:hidden;display:block;max-width:280px">
+        <img loading="lazy" src="assets/images/buffet-controls.png" alt="Controls" style="width:100%;display:block">
       </a>
     </div>
 
@@ -189,11 +203,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem cla
 
     <ol class="step-list">
       <li><span class="step-num">1.</span><span>สร้างห้องใหม่ที่ <strong>Create Party</strong></span></li>
-      <li><span class="step-num">2.</span><span>รอเพื่อนกดปุ่ม <strong>Join Room</strong> ร่วมเล่นด้วย (เล่นด้วยกันสูงสุด 4 คน) — หากมีคนเข้ามาในห้องแล้วจะปรากฏมือคีบตะเกียบในมุมอื่นๆ ของโต๊ะ</span></li>
+      <li><span class="step-num">2.</span><span>รอเพื่อนกดปุ่ม <strong>Join Room</strong> ร่วมเล่นด้วย (เล่นด้วยกันสูงสุด 4 คน): หากมีคนเข้ามาในห้องแล้วจะปรากฏมือคีบตะเกียบในมุมอื่นๆ ของโต๊ะ</span></li>
     </ol>
 
-    <a href="https://static.wixstatic.com/media/6839ea_dd29c8d016ea44b396eeece51c83344b~mv2.png/v1/fill/w_953,h_544,al_c,q_90,enc_avif,quality_auto/6839ea_dd29c8d016ea44b396eeece51c83344b~mv2.png" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.25rem">
-      <img src="https://static.wixstatic.com/media/6839ea_dd29c8d016ea44b396eeece51c83344b~mv2.png/v1/fill/w_953,h_544,al_c,q_90,enc_avif,quality_auto/6839ea_dd29c8d016ea44b396eeece51c83344b~mv2.png" alt="Lobby" style="width:100%;display:block">
+    <a href="assets/images/buffet-lobby.jpg" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.25rem">
+      <img loading="lazy" src="assets/images/buffet-lobby.jpg" alt="Lobby" style="width:100%;display:block">
     </a>
 
     <ol class="step-list" start="3">
@@ -201,16 +215,16 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem cla
       <li><span class="step-num">4.</span><span>คีบเนื้อหรือผักย่างบนกระทะ</span></li>
     </ol>
 
-    <a href="https://static.wixstatic.com/media/6839ea_e9e39153edd64642ae0389d0947dbd01~mv2.png/v1/fill/w_750,h_430,al_c,q_85,enc_avif,quality_auto/6839ea_e9e39153edd64642ae0389d0947dbd01~mv2.png" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.25rem">
-      <img src="https://static.wixstatic.com/media/6839ea_e9e39153edd64642ae0389d0947dbd01~mv2.png/v1/fill/w_750,h_430,al_c,q_85,enc_avif,quality_auto/6839ea_e9e39153edd64642ae0389d0947dbd01~mv2.png" alt="Cooking" style="width:100%;display:block">
+    <a href="assets/images/buffet-cooking.jpg" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.25rem">
+      <img loading="lazy" src="assets/images/buffet-cooking.jpg" alt="Cooking" style="width:100%;display:block">
     </a>
 
     <ol class="step-list" start="5">
       <li><span class="step-num">5.</span><span>รอให้สุกแล้วคีบใส่ถ้วยของตัวเอง หรือคีบพริก หรือเนื้อไหม้ให้ผู้เล่นคนอื่น</span></li>
     </ol>
 
-    <a href="https://static.wixstatic.com/media/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.png/v1/fill/w_750,h_430,al_c,q_85,enc_avif,quality_auto/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.png" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.25rem">
-      <img src="https://static.wixstatic.com/media/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.png/v1/fill/w_750,h_430,al_c,q_85,enc_avif,quality_auto/6839ea_5b1593d8addd431aa9e4560f060bd084~mv2.png" alt="Fighting" style="width:100%;display:block">
+    <a href="assets/images/cover-buffet-fighting.jpg" class="photo-item" style="display:block;border-radius:6px;overflow:hidden;margin:0.5rem 0 1.25rem">
+      <img loading="lazy" src="assets/images/cover-buffet-fighting.jpg" alt="Fighting" style="width:100%;display:block">
     </a>
 
     <ol class="step-list" start="6">
@@ -223,9 +237,16 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem cla
 
   </div>
 </div>
+<section class="catalog-box" aria-label="Game info">
+  <div class="cb-inner">
+    <h2>Buffet Fighting: Game Info</h2>
+    <dl><dt>Developer &amp; publisher</dt><dd><a href="about.html">Zai Studio</a> (ZAI STUDIO CO., LTD.)</dd><dt>Type</dt><dd>Game jam project (48 hours)</dd><dt>Platform</dt><dd>Web browser (WebGL)</dd><dt>Published as</dt><dd><a href="https://freetale.itch.io/buffetfighter" target="_blank" rel="noopener">Buffet Fighter</a> on itch.io</dd><dt>Credits</dt><dd>Shared team credit</dd></dl>
+    <div class="more">More games by Zai Studio: <a href="game-dala.html">Dala and the Cursed Forest</a> · <a href="game-7sexy-sins.html">7 Sexy Sins</a> · <a href="game-shootshoot.html">Shoot Shoot My Waifu</a> · <a href="game-7sins-labyrinth.html">7 Sins : Lost in Labyrinth</a> · <a href="game-tamalist.html">Tamalist</a> · <a href="games.html">All games</a></div>
+  </div>
+</section>
 </main>
 
-<footer><div class="footer-bottom"><p>© 2021 by ZAI STUDIO CO., LTD.</p><a href="games.html" style="color:var(--accent);text-decoration:none;font-size:0.8rem;">← All Games</a></div></footer>
+<footer><div class="footer-bottom"><p>© 2026 ZAI STUDIO CO., LTD.</p><a href="games.html" style="color:var(--accent);text-decoration:none;font-size:0.8rem;">← All Games</a></div></footer>
 
 <script>
 function openLB(src) {

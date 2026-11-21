@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zai Studio | Game Studio | Efficient Game Development Services</title>
-  <meta name="description" content="Thai game studio focused on quality graphics, efficiency, and player experience. PC, Mobile & Web games including Dala and the Cursed Forest.">
-  <meta name="keywords" content="Zai Studio, game studio, Thailand, game development, indie game, Dala, roguelike, Unity">
+<title>Zai Studio: Independent Game Studio from Thailand</title>
+  <link rel="canonical" href="https://www.zaistudio.net/">
+  <meta name="description" content="Zai Studio is an independent game studio from Thailand making original games, including Dala and the Cursed Forest and the 7 Sexy Sins series.">
+  <meta name="keywords" content="Zai Studio, ZAI STUDIO CO., LTD., Thai game studio, indie game studio Thailand, Dala and the Cursed Forest, 7 Sexy Sins, roguelike deckbuilder">
   <meta name="author" content="Zai Studio">
-  <meta property="og:title" content="Zai Studio | Game Studio | Efficient Game Development Services">
-  <meta property="og:description" content="Thai game studio focused on quality graphics, efficiency, and player experience. PC, Mobile & Web games including Dala and the Cursed Forest.">
+  <meta property="og:title" content="Zai Studio: Independent Game Studio from Thailand">
+  <meta property="og:description" content="Zai Studio is an independent game studio from Thailand making original games, including Dala and the Cursed Forest and the 7 Sexy Sins series.">
   <meta property="og:image" content="https://www.zaistudio.net/assets/images/6839ea_12f296ef813045aa9d63e055b48754bf_mv2.png">
-  <meta property="og:url" content="https://www.zaistudio.net/index.html">
+  <meta property="og:url" content="https://www.zaistudio.net/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Zai Studio | Game Studio | Efficient Game Development Services">
-  <meta name="twitter:description" content="Thai game studio focused on quality graphics, efficiency, and player experience. PC, Mobile & Web games including Dala and the Cursed Forest.">
+  <meta name="twitter:title" content="Zai Studio: Independent Game Studio from Thailand">
+  <meta name="twitter:description" content="Zai Studio is an independent game studio from Thailand making original games, including Dala and the Cursed Forest and the 7 Sexy Sins series.">
   <meta name="twitter:image" content="https://www.zaistudio.net/assets/images/6839ea_12f296ef813045aa9d63e055b48754bf_mv2.png">
-<meta name="description" content="Thai Game Studio focused on quality, efficiency and user experience. PC, Mobile & Web Games.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -146,7 +146,7 @@ section{padding:clamp(3rem,7vw,5.5rem) clamp(1.5rem,5vw,4rem);max-width:1280px;m
   font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:0.3em;
   color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem;
 }
-.section-tag::before{content:'— '}
+.section-tag::before{content:'';display:inline-block;width:18px;height:2px;background:var(--accent);vertical-align:middle;margin-right:8px}
 section h2{font-family:'Rajdhani',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:#fff;margin-bottom:2.5rem}
 
 /* WHY GRID */
@@ -225,7 +225,104 @@ footer{
 
 .t-card .t-author{display:flex;align-items:center;gap:0.75rem}
 .t-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--border);flex-shrink:0}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.5rem;margin-top:1.5rem}
+.feat-card{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:rgba(255,255,255,0.03);display:flex;flex-direction:column}
+.feat-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.feat-body{padding:1.5rem;display:flex;flex-direction:column;gap:0.75rem;flex:1}
+.feat-tag{font-family:'Rajdhani',sans-serif;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent)}
+.feat-body h3{font-family:'Rajdhani',sans-serif;font-size:1.5rem;font-weight:700}
+.feat-body h3 a{color:#fff;text-decoration:none}
+.feat-body p{color:var(--muted);font-size:0.92rem}
+.feat-links{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:auto}
+.feat-links a{padding:0.6rem 1.2rem;font-size:0.85rem}
+.stats{display:flex;flex-wrap:wrap;gap:0.5rem}
+.stats span{background:rgba(79,123,255,0.1);border:1px solid var(--border);border-radius:999px;padding:0.3rem 0.8rem;font-size:0.8rem;color:var(--muted)}
+.stats b{color:#fff;font-weight:600}
+
+/* ---- new hero ---- */
+.hx-stats{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.5rem}
+.hx-stats span{font-size:0.8rem;color:var(--muted);background:rgba(7,9,15,0.6);border:1px solid var(--border);border-radius:999px;padding:0.35rem 0.9rem;backdrop-filter:blur(6px)}
+.hx-stats b{color:#fff;font-weight:600}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.in{opacity:1;transform:none}
+.feat-card .feat-media{position:relative;display:block}
+.feat-card .feat-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.3s}
+.feat-card:hover .feat-media video{opacity:1}
+.feat-card{transition:transform 0.3s ease,border-color 0.3s}
+.feat-card:hover{transform:translateY(-6px);border-color:rgba(79,123,255,0.45)}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---- game feel ---- */
+.hx-stats span{display:inline-flex;align-items:center;gap:0.4rem;border-color:rgba(79,123,255,0.3);box-shadow:inset 0 0 12px rgba(79,123,255,0.08)}
+.hx-stats svg{width:14px;height:14px;fill:none;stroke:var(--accent2);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(79,123,255,0.45)}70%{box-shadow:0 0 0 14px rgba(79,123,255,0)}100%{box-shadow:0 0 0 0 rgba(79,123,255,0)}}
+.mascot{position:relative;display:flex;flex-direction:column;align-items:center}
+.mascot img{position:relative;z-index:3;animation:bob 4s ease-in-out infinite;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.45))}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.pedestal{position:relative;width:70%;height:46px;margin-top:-34px;z-index:1}
+.pedestal i{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(106,155,255,0.7);box-shadow:0 0 24px rgba(79,123,255,0.6),inset 0 0 24px rgba(79,123,255,0.35);background:radial-gradient(ellipse at center,rgba(79,123,255,0.35),transparent 70%)}
+.pedestal i+i{inset:-10px -16px;border-color:rgba(106,155,255,0.25);box-shadow:none;background:none;animation:ring 3s ease-out infinite}
+@keyframes ring{from{transform:scale(0.85);opacity:1}to{transform:scale(1.25);opacity:0}}
+.nameplate{position:absolute;left:2%;bottom:16%;z-index:3;min-width:150px;padding:0.6rem 0.8rem;border:1px solid rgba(106,155,255,0.45);border-radius:6px;background:rgba(7,9,15,0.72);backdrop-filter:blur(6px);font-family:'Rajdhani',sans-serif;display:flex;flex-direction:column;gap:0.15rem;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px))}
+.nameplate b{color:#fff;font-size:1.05rem;letter-spacing:0.12em}
+.np-lv{font-size:0.62rem;color:var(--accent2);letter-spacing:0.15em}
+.np-role{font-size:0.7rem;color:var(--muted);letter-spacing:0.08em;margin-bottom:0.3rem}
+.bar{display:block;height:5px;border-radius:3px;background:rgba(255,255,255,0.1);overflow:hidden;margin-top:3px}
+.bar em{display:block;height:100%;border-radius:3px;animation:fill 1.6s 0.6s ease-out both}
+.hp em{width:100%;background:linear-gradient(90deg,#ff5c8a,#ff9bb5)}
+.mp em{width:85%;background:linear-gradient(90deg,#4f7bff,#7fd6ff)}
+@keyframes fill{from{width:0}}
+.feat-slides .sl{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.6s}
+.feat-slides .sl.on{opacity:1}
+@media(max-width:768px){.nameplate{display:none}}
+@media(prefers-reduced-motion:reduce){.mascot img,.pedestal i,.hero .btn-primary{animation:none}}
+
+/* ---- modern game hero bg ---- */
+.hero{position:relative;isolation:isolate}
+.hero-fx{position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;overflow:hidden;contain:paint;pointer-events:none}
+html{overflow-x:hidden}
+#critter{position:absolute;inset:0;width:100%;height:100%}
+.hero-hint{position:absolute;left:50%;bottom:0.6rem;transform:translateX(-50%);font-family:Rajdhani,sans-serif;font-size:0.68rem;letter-spacing:0.25em;color:rgba(160,200,230,0.3);text-transform:uppercase;pointer-events:none;white-space:nowrap}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.22;mix-blend-mode:screen}
+.aurora .b1{width:46vw;height:46vw;left:-8vw;top:-12vw;background:#3a5490;animation:drift1 18s ease-in-out infinite alternate}
+.aurora .b2{width:38vw;height:38vw;right:-6vw;top:4vw;background:#4a3f78;opacity:0.2;animation:drift2 22s ease-in-out infinite alternate}
+.aurora .b3{width:30vw;height:30vw;left:38vw;top:18vw;background:#2f7a96;opacity:0.16;animation:drift3 16s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(10vw,6vw) scale(1.15)}}
+@keyframes drift2{to{transform:translate(-8vw,8vw) scale(0.9)}}
+@keyframes drift3{to{transform:translate(-12vw,-6vw) scale(1.2)}}
+.floor{position:absolute;left:0;right:0;bottom:0;height:40%;perspective:420px;perspective-origin:50% 0;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 35%,#000 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 35%,#000 100%)}
+.plane{position:absolute;left:-50%;right:-50%;top:0;height:200%;transform-origin:50% 0;transform:rotateX(68deg);
+  background-image:linear-gradient(rgba(106,155,255,0.35) 1px,transparent 1px),linear-gradient(90deg,rgba(106,155,255,0.35) 1px,transparent 1px);
+  background-size:64px 64px;animation:floor 3s linear infinite}
+@keyframes floor{to{background-position:0 64px}}
+.horizon{position:absolute;left:0;right:0;bottom:40%;height:1px;background:linear-gradient(90deg,transparent,rgba(127,214,255,0.55),transparent);box-shadow:0 0 24px 4px rgba(79,123,255,0.3)}
+.scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,0.025) 0 1px,transparent 1px 3px);mix-blend-mode:overlay}
+.hud{position:absolute;inset:0;pointer-events:none;z-index:0}
+.hud i{position:absolute;width:28px;height:28px;border:2px solid rgba(127,214,255,0.55);z-index:0}
+.hud .tl{left:clamp(0.5rem,2vw,1.5rem);top:1.5rem;border-right:0;border-bottom:0}
+.hud .tr{right:clamp(0.5rem,2vw,1.5rem);top:1.5rem;border-left:0;border-bottom:0}
+.hud .bl{left:clamp(0.5rem,2vw,1.5rem);bottom:1.5rem;border-right:0;border-top:0}
+.hud .br{right:clamp(0.5rem,2vw,1.5rem);bottom:1.5rem;border-left:0;border-top:0}
+.ring{position:absolute;left:50%;top:44%;width:min(30vw,420px);aspect-ratio:1;transform:translate(-50%,-50%);z-index:0}
+.ring i{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(127,214,255,0.35);animation:spin 40s linear infinite}
+.ring i+i{inset:9%;border:2px solid transparent;border-top-color:rgba(106,155,255,0.7);border-right-color:rgba(255,155,181,0.45);animation:spin 9s linear infinite reverse;filter:drop-shadow(0 0 8px rgba(79,123,255,0.6))}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:768px){.ring{width:70vw;top:40%}.floor{height:30%}.horizon{bottom:30%}}
+@media(prefers-reduced-motion:reduce){.aurora i,.plane,.ring i{animation:none}}
+
+.orbit{position:absolute;inset:0;pointer-events:none}
+.chip{position:absolute;left:50%;top:60%;pointer-events:auto;display:flex;flex-direction:column;gap:1px;padding:0.45rem 0.8rem;border-radius:8px;text-decoration:none;
+  background:rgba(10,16,28,0.72);border:1px solid rgba(127,214,255,0.35);backdrop-filter:blur(6px);box-shadow:0 6px 20px rgba(0,0,0,0.35),inset 0 0 14px rgba(79,123,255,0.08);
+  transition:border-color 0.2s,background 0.2s,opacity 0.3s;white-space:nowrap;will-change:transform}
+.chip b{font-family:'Rajdhani',sans-serif;font-size:0.9rem;color:#fff;letter-spacing:0.04em}
+.chip span{font-size:0.68rem;color:rgba(170,200,225,0.8)}
+.chip::before{content:'';position:absolute;left:-4px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:#7fd6ff;box-shadow:0 0 8px #7fd6ff}
+.chip:hover,.chip:focus-visible{border-color:rgba(127,214,255,0.9);background:rgba(20,34,58,0.92);opacity:1!important}
+@media(max-width:768px){.hero{padding-bottom:110px!important}.hero-hint{display:none}.chip{padding:0.3rem 0.55rem}.chip b{font-size:0.74rem}.chip span{font-size:0.58rem}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://www.zaistudio.net/#website", "url": "https://www.zaistudio.net/", "name": "Zai Studio", "publisher": {"@id": "https://www.zaistudio.net/#org"}}, {"@type": "Organization", "@id": "https://www.zaistudio.net/#org", "name": "Zai Studio", "legalName": "ZAI STUDIO CO., LTD.", "alternateName": "ZAI STUDIO", "url": "https://www.zaistudio.net/", "logo": "https://www.zaistudio.net/assets/logos/zai-studio-logo.png", "email": "contact.zaistudio@gmail.com", "description": "Independent game studio from Thailand making original games with distinctive art and gameplay.", "address": {"@type": "PostalAddress", "addressCountry": "TH"}, "founder": {"@id": "https://www.zaistudio.net/about.html#ussarin"}, "sameAs": ["https://www.facebook.com/ZaiStudio", "https://twitter.com/Zai_Studio", "https://www.youtube.com/channel/UCz8Jmx_ahddrO3pYkh9ZxOA", "https://www.linkedin.com/company/67077298/", "https://www.instagram.com/zaistudiogame", "https://www.tiktok.com/@zaistudio"]}, {"@type": "Person", "@id": "https://www.zaistudio.net/about.html#ussarin", "name": "Ussarin Maneewuttiworasakul", "alternateName": "Nonae", "jobTitle": "Co-founder & Game Director", "worksFor": {"@id": "https://www.zaistudio.net/#org"}, "url": "https://www.zaistudio.net/about.html#ussarin", "image": "https://www.zaistudio.net/assets/images/ussarin-maneewuttiworasakul.jpg", "description": "Co-founder and Game Director of Zai Studio, with about 20 years in game, animation and publishing studios. Leads game design, art direction, character design and production, and runs the studio's business operations. Responsible for most of Dala and the Cursed Forest.", "knowsAbout": ["Game design", "Art direction", "Character design", "2D animation", "Game production", "Studio management"], "sameAs": ["https://th.linkedin.com/in/vindnae"]}, {"@type": "WebPage", "@id": "https://www.zaistudio.net/", "url": "https://www.zaistudio.net/", "name": "Zai Studio: Independent Game Studio from Thailand", "inLanguage": "en", "isPartOf": {"@id": "https://www.zaistudio.net/#website"}, "description": "Zai Studio is an independent game studio from Thailand making original games, including Dala and the Cursed Forest and the 7 Sexy Sins series.", "about": {"@id": "https://www.zaistudio.net/#org"}}]}</script>
 </head>
 <body>
 
@@ -247,7 +344,7 @@ footer{
 <nav>
   <a href="#" class="logo">
     <div class="logo-img">
-      <img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="Zai Studio Logo" onerror="this.parentElement.textContent='Z'">
+      <img src="assets/logos/zai-studio-logo.png" alt="Zai Studio Logo" onerror="this.parentElement.textContent='Z'">
     </div>
     <div class="logo-text">
       <b>ZAI STUDIO</b>
@@ -256,10 +353,10 @@ footer{
   </a>
   <ul class="nav-links" id="nav-links">
     <li><a href="#" class="active">Home</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="about.html">About Us</a></li>
     <li><a href="games.html">Our Games</a></li>
-    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Get a Quote</a></li>
+    <li><a href="services.html">What We Do</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="mailto:contact.zaistudio@gmail.com" class="btn-nav">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -270,56 +367,91 @@ footer{
 
 <!-- HERO -->
 <div class="hero">
+  <div class="hero-fx" aria-hidden="true">
+    <div class="aurora"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+    <div class="floor"><div class="plane"></div></div>
+    <div class="horizon"></div>
+    <div class="scan"></div>
+    <canvas id="critter"></canvas>
+  </div>
+  <p class="hero-hint" aria-hidden="true">Click to make a fish jump out for the cat</p>
+  <div class="hud" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
   <div class="hero-content">
-    <p class="section-tag">Thai Game Studio</p>
-    <h1>Delivering Joy Through Games,<br>Meeting Your Unique Needs</h1>
-    <p>Games serve as powerful communication media. Despite Zai Studio being small, we focus on user experience, efficiency, and productivity systemss to create wonderful games.</p>
+    <p class="section-tag">Independent Game Studio · Thailand</p>
+    <h1>Tiny Studio.<br>Big Results.</h1>
+    <p>An independent studio from Thailand making original games with distinctive art. Now in Early Access on Steam: <strong style="color:#fff">Dala and the Cursed Forest</strong>, a roguelike deckbuilder inspired by Thai mythology.</p>
     <div class="hero-btns">
-      <a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">Get a Quote</a>
+      <a href="https://store.steampowered.com/app/2748770/" target="_blank" rel="noopener" class="btn-primary">Play Dala on Steam</a>
       <a href="games.html" class="btn-secondary">View Our Games</a>
     </div>
-    <div class="hero-tags">
-      <span class="hero-tag">PC Game</span>
-      <span class="hero-tag">Mobile Game</span>
-      <span class="hero-tag">Web Game</span>
-      <span class="hero-tag">5+ Platforms</span>
-      <span class="hero-tag">Unity</span>
-      <span class="hero-tag">2D Spine</span>
+    <div class="hx-stats">
+      <span><svg viewBox="0 0 24 24"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-6 10v-1a6 6 0 0 1 12 0v1m2-10a3 3 0 1 0 0-6m4 16v-1a5 5 0 0 0-3-4.6"/></svg><b>150K+</b> players of the 7 Sexy Sins series</span>
+      <span><svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4zm0 2H5a3 3 0 0 0 3 4m8-4h3a3 3 0 0 1-3 4m-4 3v4m-4 4h8m-6-4h4"/></svg><b>1st place</b> depa Game Accelerator (Dala)</span>
     </div>
   </div>
   <div class="hero-image">
-    <img
-      src="https://static.wixstatic.com/media/6839ea_54d21862d953449096dd45092d6f9168~mv2.png/v1/fill/w_370,h_665,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Mali.png"
-      alt="Zai Studio Character"
-    >
+    <div class="mascot">
+      <div class="ring" aria-hidden="true"><i></i><i></i></div>
+      <div class="orbit" role="navigation" aria-label="Explore Zai Studio">
+        <a href="game-dala.html" class="chip"><b>Dala</b><span>Early Access on Steam</span></a>
+        <a href="game-7sexy-sins.html" class="chip"><b>7 Sexy Sins</b><span>150K+ players</span></a>
+        <a href="game-dala.html#media-kit" class="chip"><b>Media Kit</b><span>For press &amp; creators</span></a>
+        <a href="services.html#consulting" class="chip"><b>Consulting</b><span>Scope, plan, ship</span></a>
+        <a href="about.html#ussarin" class="chip"><b>Meet Nonae</b><span>Game director</span></a>
+      </div>
+      <img src="assets/images/mali.webp" alt="Mali, the Zai Studio mascot">
+      <div class="pedestal"><i></i><i></i></div>
+    </div>
   </div>
 </div>
 
-<!-- WHY CHOOSE -->
+<!-- WHAT WE DO -->
 <section>
-  <p class="section-tag">Our Edge</p>
-  <h2>Why Choose Zai Studio</h2>
+  <p class="section-tag">What We Do</p>
+  <h2>Games First, Craft Always</h2>
   <div class="why-grid">
-    <div class="why-card">
+    <a class="why-card" href="games.html" style="text-decoration:none;color:inherit">
+      <div class="why-icon">🎮</div>
+      <h3>Original Games</h3>
+      <p>We create our own games with distinctive art and gameplay.</p>
+    </a>
+    <a class="why-card" href="services.html#consulting" style="text-decoration:none;color:inherit">
+      <div class="why-icon">🧭</div>
+      <h3>Game Project &amp; Pipeline Consulting</h3>
+      <p>We help game teams scope their projects, plan production, and set up workflows that fit their team.</p>
+    </a>
+    <a class="why-card" href="services.html#art" style="text-decoration:none;color:inherit">
       <div class="why-icon">🎨</div>
-      <h3>Quality Graphic with Optimization</h3>
-      <p>We plan to provide the best quality games to support the target audience devices with beautiful images without lagging.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">🤝</div>
-      <h3>Win-Win Situation</h3>
-      <p>We sell our games at affordable prices that players still find worthwhile. We deal with sincerity and honesty for good results for both our customers and us.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">⚙️</div>
-      <h3>Efficiency Management Service</h3>
-      <p>We use Agile principles and Trello in our management to test the prototype for better quality work at a proper time and good cost.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">💡</div>
-      <h3>Experienced Advisor Service</h3>
-      <p>We are at your service advising those interested in making games — whether universities, professors, students, or entrepreneurs.</p>
-    </div>
+      <h3>Game Art &amp; Marketing Assets</h3>
+      <p>We take on selected projects, from in-game art to visuals for Steam pages and game launches.</p>
+    </a>
+  </div>
+</section>
+
+<!-- FEATURED GAMES -->
+<section>
+  <p class="section-tag">Featured Games</p>
+  <h2>Our Highlights</h2>
+  <div class="feat-grid">
+    <article class="feat-card">
+      <a href="game-dala.html" class="feat-media"><img loading="lazy" src="assets/dala/dala-key-art.jpg" alt="Dala and the Cursed Forest key art"><video muted loop playsinline preload="none" poster="assets/dala/dala-clip-transformation-poster.jpg"><source src="assets/dala/dala-clip-transformation.mp4" type="video/mp4"></video></a>
+      <div class="feat-body">
+        <p class="feat-tag">Early Access on Steam · 2026</p>
+        <h3><a href="game-dala.html">Dala and the Cursed Forest</a></h3>
+        <p>A roguelike deckbuilder inspired by Thai mythology. Fuse cards, transform mid-battle and command plant allies.</p>
+        <div class="feat-links"><a href="game-dala.html" class="btn-primary">Game Page &amp; Press Kit</a><a href="https://store.steampowered.com/app/2748770/" target="_blank" rel="noopener" class="btn-secondary">Steam</a></div>
+      </div>
+    </article>
+    <article class="feat-card">
+      <a href="game-7sexy-sins.html" class="feat-media feat-slides"><img loading="lazy" src="assets/images/cover-7sexy-mobile.jpg" alt="7 Sexy Sins"><img loading="lazy" class="sl" src="assets/images/6839ea_7ec56d794e3642469f08861bee6a67b4_mv2.jpg" alt=""><img loading="lazy" class="sl" src="assets/images/7sexy-mobile-screenshot-2.jpg" alt=""><img loading="lazy" class="sl" src="assets/images/cover-7sexy-tadaima.jpg" alt=""></a>
+      <div class="feat-body">
+        <p class="feat-tag">Series · Steam &amp; Google Play</p>
+        <h3><a href="game-7sexy-sins.html">7 Sexy Sins</a></h3>
+        <div class="stats"><span><b>150K+</b> players across Steam &amp; Google Play</span><span><b>Very Positive</b> on Steam</span></div>
+        <p>Our best-known series: hunt the Demons of the Seven Sins as the angel Raphael. Three games on Steam and a mobile version on Google Play.</p>
+        <div class="feat-links"><a href="game-7sexy-sins.html" class="btn-primary">Series Page</a><a href="https://store.steampowered.com/app/1023740/" target="_blank" rel="noopener" class="btn-secondary">Steam</a><a href="https://play.google.com/store/apps/details?id=com.zai_soft.sevensexysins" target="_blank" rel="noopener" class="btn-secondary">Google Play</a></div>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -353,11 +485,12 @@ footer{
   <p class="section-tag" style="justify-content:center;display:flex">Ecosystem</p>
   <h2>Our Partners</h2>
   <div class="partners-row">
-    <img src="https://static.wixstatic.com/media/6839ea_543917ea80a949de82fcffa198bc1710~mv2.png/v1/fill/w_140,h_43,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/steam-logo.png" alt="Steam" class="partner-logo">
-    <img src="https://static.wixstatic.com/media/6839ea_21341084c1764d1e84a315da92e1fe28~mv2.png/v1/fill/w_74,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/datawow_blacktext.png" alt="Datawow" class="partner-logo">
-    <img src="https://static.wixstatic.com/media/6839ea_f60ffb6784c845ffa87c55928eeda978~mv2.png/v1/fill/w_96,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CCG-Logo-Black%2BTitle.png" alt="CCG" class="partner-logo">
-    <img src="https://static.wixstatic.com/media/6839ea_19642b45ee8e4403a7a831d77c7be2d3~mv2.png/v1/fill/w_60,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/zeta.png" alt="Zeta" class="partner-logo">
-    <img src="https://static.wixstatic.com/media/6839ea_dc3178e6acab4cbb8d3c6015cd70b784~mv2.png/v1/fill/w_110,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/nutaku-logo.png" alt="Nutaku" class="partner-logo">
+    <img src="assets/logos/steam.webp" alt="Steam" class="partner-logo">
+    <img src="assets/logos/datawow.webp" alt="Datawow" class="partner-logo">
+    <img src="assets/logos/ccg.webp" alt="CCG" class="partner-logo">
+    <img src="assets/logos/zeta.webp" alt="Zeta" class="partner-logo">
+    <img src="assets/logos/nutaku.webp" alt="Nutaku" class="partner-logo">
+    <img src="assets/logos/depa.webp" alt="depa: Digital Economy Promotion Agency" class="partner-logo">
   </div>
 </section>
 
@@ -366,11 +499,11 @@ footer{
 <!-- CTA -->
 <div class="cta-strip">
   <div class="cta-inner">
-    <h2>Ready to Build Your Game?</h2>
+    <h2>Let&rsquo;s Talk Games</h2>
     <div class="cta-emails">
       <a href="mailto:contact.zaistudio@gmail.com">contact.zaistudio@gmail.com</a>
     </div>
-    <a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">Get a Quote</a>
+    <a href="mailto:contact.zaistudio@gmail.com" class="btn-primary">Contact Us</a>
   </div>
 </div>
 
@@ -380,19 +513,19 @@ footer{
     <div class="footer-brand">
       <a href="#" class="logo">
         <div class="logo-img">
-          <img src="https://static.wixstatic.com/media/6839ea_f7c9b469fdb84dd085f4dd36c91f74a1~mv2.png/v1/fill/w_39,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo_300x310.png" alt="" onerror="this.parentElement.textContent='Z'">
+          <img src="assets/logos/zai-studio-logo.png" alt="Zai Studio logo" onerror="this.parentElement.textContent='Z'">
         </div>
         <div class="logo-text"><b>ZAI STUDIO</b><span>Game Studio</span></div>
       </a>
-      <p>Delivering Joy Through Games, Meeting Your Unique Needs.</p>
+      <p>Original games with distinctive art and gameplay, made in Thailand.</p>
     </div>
     <div class="footer-col">
       <h4>Menu</h4>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About Us</a></li>
         <li><a href="games.html">Our Games</a></li>
+        <li><a href="services.html">What We Do</a></li>
+        <li><a href="about.html">About Us</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -408,7 +541,7 @@ footer{
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2021 by ZAI STUDIO CO., LTD. All rights reserved.</p>
+    <p>© 2026 ZAI STUDIO CO., LTD. All rights reserved.</p>
     <div class="footer-socials">
       <a href="https://www.facebook.com/ZaiStudio" target="_blank">Facebook</a>
       <a href="https://www.youtube.com/channel/UCz8Jmx_ahddrO3pYkh9ZxOA" target="_blank">YouTube</a>
@@ -432,6 +565,111 @@ for(let i=0;i<120;i++){
   `;
   starsEl.appendChild(s);
 }
+
+
+(function(){
+  // hover-to-play on feature cards
+  document.querySelectorAll('.feat-media video').forEach(fv=>{const c=fv.closest('.feat-card');
+    c.addEventListener('mouseenter',()=>fv.play().catch(()=>{})); c.addEventListener('mouseleave',()=>fv.pause());});
+  // scroll reveal
+  const els=document.querySelectorAll('main section:not(.hx), .testimonials-wrap');
+  if('IntersectionObserver' in window){ els.forEach(el=>el.classList.add('reveal'));
+    const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:0.12});
+    els.forEach(el=>io.observe(el)); }
+})();
+
+
+
+// Hologram cat: runs on the grid, chases the cursor and eats glowing cells
+(function(){
+  const cv=document.getElementById('critter'), hero=document.querySelector('.hero'); if(!cv||!hero) return;
+  const x=cv.getContext('2d'), reduce=matchMedia('(prefers-reduced-motion:reduce)').matches, dpr=Math.min(devicePixelRatio||1,2);
+  let lastMove=0,W,H,G,cells=[],ripples=[],cat={x:120,vx:0,dir:1,t:0,hop:0},target=null,pops=[],last=0;
+  function size(){const r=cv.getBoundingClientRect();W=cv.width=r.width*dpr;H=cv.height=r.height*dpr;G=innerWidth<=768?H-22*dpr:H*0.86;
+    if(!cells.length) {const n=r.width<600?4:8; for(let i=0;i<n;i++) cells.push({x:W*(0.08+i*(0.84/(n-1))),a:1});}}
+  size(); addEventListener('resize',size);
+  const fx=()=>cv.getBoundingClientRect();
+  hero.addEventListener('mousemove',e=>{target=(e.clientX-fx().left)*dpr; lastMove=performance.now();});
+  hero.addEventListener('mouseleave',()=>{target=null;});
+  hero.addEventListener('touchstart',e=>{const t=e.touches[0],r=fx(); if(!e.target.closest('a,button')){cells.push({x:(t.clientX-r.left)*dpr,y:G+6*dpr,vy:-(5+Math.random()*2)*dpr,spin:(Math.random()-0.5)*0.25,rot:0,fall:true,a:1}); ripples.push({x:(t.clientX-r.left)*dpr,r:3*dpr,l:1}); cat.hop=1;}},{passive:true});
+  hero.addEventListener('click',e=>{ if(e.target.closest('a,button')) return; const r=fx();
+    cells.push({x:(e.clientX-r.left)*dpr,y:G+6*dpr,vy:-(5+Math.random()*2)*dpr,spin:(Math.random()-0.5)*0.25,rot:0,fall:true,a:1}); ripples.push({x:(e.clientX-r.left)*dpr,r:3*dpr,l:1}); target=(e.clientX-r.left)*dpr; lastMove=performance.now(); cat.hop=1; });
+  const C='127,214,255';
+  function drawCat(){
+    const s=dpr*1.45, bx=cat.x, by=G-6*s-Math.abs(Math.sin(cat.hop*Math.PI))*26*s, run=Math.abs(cat.vx)>0.4, leg=run?Math.sin(cat.t*0.45)*5*s:0;
+    x.save(); x.translate(bx,by); x.scale(cat.dir,1);
+    x.shadowColor=`rgba(${C},0.8)`; x.shadowBlur=14*s; x.strokeStyle=`rgba(${C},0.95)`; x.fillStyle=`rgba(${C},0.18)`; x.lineWidth=2*s;
+    // tail
+    x.beginPath(); x.moveTo(-16*s,-12*s); x.quadraticCurveTo(-30*s,-20*s+Math.sin(cat.t*0.2)*4*s,-26*s,-34*s); x.stroke();
+    // body
+    x.beginPath(); x.ellipse(0,-12*s,17*s,10*s,0,0,7); x.fill(); x.stroke();
+    // legs
+    x.beginPath(); x.moveTo(-9*s,-4*s); x.lineTo(-9*s+leg,6*s); x.moveTo(9*s,-4*s); x.lineTo(9*s-leg,6*s); x.stroke();
+    // head
+    x.beginPath(); x.arc(17*s,-24*s,10*s,0,7); x.fill(); x.stroke();
+    // ears
+    x.beginPath(); x.moveTo(10*s,-31*s); x.lineTo(12*s,-42*s); x.lineTo(18*s,-33*s); x.moveTo(20*s,-33*s); x.lineTo(26*s,-41*s); x.lineTo(26*s,-29*s); x.stroke();
+    // eye
+    x.shadowBlur=0; x.fillStyle=`rgba(${C},1)`; x.beginPath(); x.arc(21*s,-25*s,1.8*s,0,7); x.fill();
+    x.restore();
+  }
+  function frame(now){
+    const dt=Math.min(32,now-last||16)/16; last=now; x.clearRect(0,0,W,H);
+    // pick a goal: cursor while it is active, else hunt the nearest fish
+    if(target!=null && now-lastMove>2500) target=null;
+    let goal=target;
+    if(goal==null){ const live=cells.filter(c=>c.a>0.5); goal=live.length? live.reduce((b,c)=>Math.abs(c.x-cat.x)<Math.abs(b.x-cat.x)?c:b).x : (cat.dir>0?W*0.9:W*0.1); }
+    const d=goal-cat.x; cat.vx+= Math.sign(d)*Math.min(Math.abs(d)*0.002,0.35)*dt; cat.vx*=0.9; if(Math.abs(d)<4) cat.vx*=0.6;
+    cat.x=Math.max(20*dpr,Math.min(W-20*dpr,cat.x+cat.vx*dt*3)); if(Math.abs(cat.vx)>0.15) cat.dir=cat.vx>0?1:-1; cat.t+=Math.abs(cat.vx)*dt*2+0.3;
+    if(cat.hop>0) cat.hop=Math.max(0,cat.hop-0.035*dt);
+    // cells
+    for(const c of cells){ if(c.a<1&&c.a>=0) c.a=Math.min(1,c.a+0.03*dt);
+      if(c.fall){ c.vy+=0.55*dpr*dt; c.y+=c.vy*dt; c.rot+=c.spin*dt; const floor=G-10*dpr;
+        if(c.vy>0 && c.y>=floor){ c.y=floor; if(c.vy>3*dpr){ c.vy*=-0.35; c.spin*=-0.5; ripples.push({x:c.x,r:4*dpr,l:1}); } else { c.fall=false; c.rot=0; } } }
+      if(c.a>0.5 && !c.fall && Math.abs(c.x-(cat.x+cat.dir*17*dpr))<10*dpr){ c.a=-1; pops.push({x:c.x,y:G-14*dpr,l:1}); setTimeout(()=>{Object.assign(c,{a:1,y:G+6*dpr,vy:-(5+Math.random()*2)*dpr,rot:0,spin:(Math.random()-0.5)*0.25,fall:true}); ripples.push({x:c.x,r:3*dpr,l:1});},2600); }
+      if(c.a<=0) continue; const f=dpr*1.3, y=c.fall?c.y:G-10*dpr+Math.sin(now*0.004+c.x)*2*dpr;
+      x.save(); x.translate(c.x,y); x.rotate(c.fall?c.rot:Math.sin(now*0.003+c.x)*0.12); x.globalAlpha=c.a*Math.max(0,Math.min(1,(G+6*dpr-y)/(14*dpr)+0.15));
+      x.shadowColor='rgba(110,160,220,0.35)'; x.shadowBlur=4*f; x.strokeStyle='rgba(120,170,225,0.55)'; x.fillStyle='rgba(110,160,220,0.08)'; x.lineWidth=1.6*f;
+      x.beginPath(); x.ellipse(0,0,8*f,4.5*f,0,0,7); x.fill(); x.stroke();
+      x.beginPath(); x.moveTo(-7*f,0); x.lineTo(-13*f,-4.5*f); x.lineTo(-13*f,4.5*f); x.closePath(); x.fill(); x.stroke();
+      x.shadowBlur=0; x.fillStyle='rgba(170,205,240,0.8)'; x.beginPath(); x.arc(4*f,-1*f,1.1*f,0,7); x.fill();
+      x.beginPath(); x.moveTo(-1*f,-4*f); x.quadraticCurveTo(1*f,0,-1*f,4*f); x.stroke();
+      x.restore(); }
+    if(cells.length>24) cells.splice(0,cells.length-24);
+    for(const p of pops){ p.l-=0.025*dt; p.y-=1.2*dpr*dt; x.fillStyle=`rgba(255,170,200,${Math.max(0,p.l)})`; x.font=`${14*dpr}px sans-serif`; x.fillText('♥',p.x-5*dpr,p.y); }
+    pops=pops.filter(p=>p.l>0);
+    for(const q of ripples){ q.l-=0.04*dt; q.r+=1.6*dpr*dt; x.strokeStyle=`rgba(120,170,225,${Math.max(0,q.l)*0.6})`; x.lineWidth=1.2*dpr; x.beginPath(); x.ellipse(q.x,G-4*dpr,q.r*1.8,q.r*0.45,0,0,7); x.stroke(); }
+    ripples=ripples.filter(q=>q.l>0);
+    drawCat();
+    if(!document.hidden) requestAnimationFrame(frame);
+  }
+  if(reduce){ drawCat(); return; }
+  document.addEventListener('visibilitychange',()=>{ if(!document.hidden) requestAnimationFrame(frame); });
+  requestAnimationFrame(frame);
+})();
+
+
+// Orbiting info chips around Mali
+(function(){
+  const o=document.querySelector('.orbit'); if(!o) return; const chips=[...o.querySelectorAll('.chip')];
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches; let a=0,paused=false,last=0;
+  chips.forEach(c=>{c.addEventListener('mouseenter',()=>paused=true);c.addEventListener('mouseleave',()=>paused=false);c.addEventListener('focus',()=>paused=true);c.addEventListener('blur',()=>paused=false);});
+  function place(){
+    const r=o.getBoundingClientRect(), m=innerWidth<=768, rx=m?Math.min(innerWidth*0.34,innerWidth/2-62):r.width*0.74, ry=r.height*(m?0.14:0.17);
+    chips.forEach((c,i)=>{const t=a+i*2*Math.PI/chips.length, x=Math.cos(t)*rx, y=Math.sin(t)*ry, front=Math.sin(t)>0;
+      const sc=0.82+0.18*(Math.sin(t)+1)/2;
+      c.style.transform=`translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${sc})`; c.style.zIndex=front?5:1; c.style.opacity=front?1:0.55;});
+  }
+  function tick(now){ const dt=Math.min(50,now-last||16); last=now; if(!paused&&!reduce) a+=dt*0.00012; place(); if(!document.hidden) requestAnimationFrame(tick); }
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)requestAnimationFrame(tick)}); addEventListener('resize',place);
+  const im=document.querySelector('.mascot img'); if(im) im.addEventListener('load',place);
+  place(); requestAnimationFrame(tick);
+})();
+
+// 7 Sexy Sins card: hover slideshow
+document.querySelectorAll('.feat-slides').forEach(el=>{const sl=[...el.querySelectorAll('.sl')];let t,i=-1;const card=el.closest('.feat-card');
+  card.addEventListener('mouseenter',()=>{const step=()=>{sl.forEach(s=>s.classList.remove('on'));i=(i+1)%sl.length;sl[i].classList.add('on');};step();t=setInterval(step,1300);});
+  card.addEventListener('mouseleave',()=>{clearInterval(t);sl.forEach(s=>s.classList.remove('on'));i=-1;});});
 
 // Mobile nav
 document.getElementById('nav-toggle').addEventListener('click',()=>{
